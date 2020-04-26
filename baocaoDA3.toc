@@ -1,0 +1,61 @@
+\babel@toc {vietnamese}{}
+\contentsline {chapter}{\numberline {1}C\IeC {\OHORN } S\IeC {\h \OHORN } D\IeC {\~\UHORN } LI\IeC {\d \ECIRCUMFLEX }U L\IeC {\'\OHORN }N}{3}% 
+\contentsline {chapter}{\numberline {2}C\IeC {\OHORN } S\IeC {\h \OHORN } D\IeC {\~\UHORN } LI\IeC {\d \ECIRCUMFLEX }U PH\IeC {\^A}N T\IeC {\'A}N}{4}% 
+\contentsline {chapter}{\numberline {3}H\IeC {\d \ECIRCUMFLEX } QU\IeC {\h A}N TR\IeC {\d I} C\IeC {\OHORN } S\IeC {\h \OHORN } D\IeC {\~\UHORN } LI\IeC {\d \ECIRCUMFLEX }U ORACLE}{5}% 
+\contentsline {section}{\numberline {3.1}Lecture 1}{5}% 
+\contentsline {section}{\numberline {3.2}Lecture 2}{5}% 
+\contentsline {subsection}{\numberline {3.2.1}Practice 1}{5}% 
+\contentsline {subsection}{\numberline {3.2.2}Practice 2}{5}% 
+\contentsline {subsection}{\numberline {3.2.3}Practice 3}{5}% 
+\contentsline {subsection}{\numberline {3.2.4}Practice 4}{6}% 
+\contentsline {subsection}{\numberline {3.2.5}Practice 5}{6}% 
+\contentsline {subsection}{\numberline {3.2.6}Practice 6}{6}% 
+\contentsline {section}{\numberline {3.3}Lecture 3}{6}% 
+\contentsline {subsection}{\numberline {3.3.1}Practice 1}{6}% 
+\contentsline {subsection}{\numberline {3.3.2}Practice 2}{6}% 
+\contentsline {subsection}{\numberline {3.3.3}Practice 3}{6}% 
+\contentsline {subsection}{\numberline {3.3.4}Practice 4}{7}% 
+\contentsline {subsection}{\numberline {3.3.5}Practice 5}{7}% 
+\contentsline {subsection}{\numberline {3.3.6}Practice 6}{7}% 
+\contentsline {section}{\numberline {3.4}Lecture 4}{7}% 
+\contentsline {subsection}{\numberline {3.4.1}Practice 1}{7}% 
+\contentsline {subsection}{\numberline {3.4.2}Practice 2}{8}% 
+\contentsline {subsection}{\numberline {3.4.3}Practice 3}{8}% 
+\contentsline {subsection}{\numberline {3.4.4}Practice 4}{8}% 
+\contentsline {subsection}{\numberline {3.4.5}Practice 5}{8}% 
+\contentsline {subsection}{\numberline {3.4.6}Practice 6}{8}% 
+\contentsline {subsection}{\numberline {3.4.7}Practice 7}{8}% 
+\contentsline {subsection}{\numberline {3.4.8}Practice 8}{9}% 
+\contentsline {subsection}{\numberline {3.4.9}Practice 9}{9}% 
+\contentsline {section}{\numberline {3.5}Lecture 5}{9}% 
+\contentsline {subsection}{\numberline {3.5.1}Practice 1}{9}% 
+\contentsline {subsection}{\numberline {3.5.2}Practice 2}{9}% 
+\contentsline {subsection}{\numberline {3.5.3}Practice 3}{9}% 
+\contentsline {subsection}{\numberline {3.5.4}Practice 4}{10}% 
+\contentsline {subsection}{\numberline {3.5.5}Practice 5}{10}% 
+\contentsline {subsection}{\numberline {3.5.6}Practice 6}{10}% 
+\contentsline {subsection}{\numberline {3.5.7}Practice 7}{10}% 
+\contentsline {subsection}{\numberline {3.5.8}Practice 8}{10}% 
+\contentsline {subsection}{\numberline {3.5.9}Practice 9}{10}% 
+\contentsline {section}{\numberline {3.6}Lecture 6}{11}% 
+\contentsline {subsection}{\numberline {3.6.1}Practice 1}{11}% 
+\contentsline {subsection}{\numberline {3.6.2}Practice 2}{11}% 
+\contentsline {subsection}{\numberline {3.6.3}Practice 3}{11}% 
+\contentsline {subsection}{\numberline {3.6.4}Practice 4}{11}% 
+\contentsline {subsection}{\numberline {3.6.5}Practice 5}{12}% 
+\contentsline {subsection}{\numberline {3.6.6}Practice 6}{12}% 
+\contentsline {subsection}{\numberline {3.6.7}Practice 7}{12}% 
+\contentsline {section}{\numberline {3.7}Lecture 7}{12}% 
+\contentsline {section}{\numberline {3.8}Lecture 8}{12}% 
+\contentsline {subsection}{\numberline {3.8.1}Practice 1}{12}% 
+\contentsline {subsection}{\numberline {3.8.2}Practice 2}{13}% 
+\contentsline {subsection}{\numberline {3.8.3}Practice 3}{13}% 
+\contentsline {subsection}{\numberline {3.8.4}Practice 4}{13}% 
+\contentsline {section}{\numberline {3.9}Lecture 9}{13}% 
+\contentsline {section}{\numberline {3.10}Lecture 10}{13}% 
+\contentsline {section}{\numberline {3.11}Lecture 11}{13}% 
+\contentsline {subsection}{\numberline {3.11.1}Practice 1}{13}% 
+\contentsline {subsection}{\numberline {3.11.2}Practice 2}{14}% 
+\contentsline {subsection}{\numberline {3.11.3}Practice 3}{14}% 
+\contentsline {chapter}{\numberline {4}B\IeC {\`A}I T\IeC {\d \ACIRCUMFLEX }P K\IeC {\'\ECIRCUMFLEX }T TH\IeC {\'U}C M\IeC {\^O}N}{15}% 
+\contentsline {subsubsection}{Sample subsubsection}{15}% 

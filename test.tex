@@ -1,0 +1,63 @@
+\documentclass[a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=3cm]{geometry}
+%\documentclass{article}
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+
+\usepackage[vietnamese=nohyphenation]{hyphsubst}
+\usepackage[vietnamese]{babel}
+%\setlength{\parindent}{1cm} % Default is 15pt.
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\begin{document}
+
+$H(X) \leq \log_{2}(|supp X|)$
+
+\begin{equation*}
+\begin{array}{l@{}l}
+H(X,Y)
+	&{}= \displaystyle -\sum_{i,j}p(a_{i},b_{j})\log_{2} p(a_{i},b_{j}) \\
+	&{}= \displaystyle -\sum_{i,j}p(a_{i},b_{j})\log_{2} p(a_{i})p(b_{j}|a_{i}) \\ 
+	&{}= \displaystyle -\sum_{i,j}p(a_{i},b_{j})[\log_{2}p(a_{i}) + \log_{2}p(b_{j}|a_{i}) ] \\
+	&{}= \displaystyle -\sum_{i,j}p(a_{i},b_{j})\log_{2}p(a_{i})  \displaystyle -\sum_{i,j}p(a_{i},b_{j})\log_{2}p(b_{j}|a_{i}) \\
+	&{}= \displaystyle -\sum_{i,j}p(a_{i},b_{j})\log_{2}p(a_{i}) \displaystyle -\sum_{i,j}p(a_{i}).p(b_{j}|a_{i})\log_{2}p(b_{j}|a_{i}) \\
+	&{}= \displaystyle -\sum_{i=1}^{m}p(a_{i}) \log_{2}p(a_{i}) \displaystyle \sum_{j=1}^{n}p(b_{j}|a_{i}) + H(Y|X) \\
+	&{}= \displaystyle -\sum_{i=1}^{m}p(a_{i}) \log_{2}p(a_{i}) + H(Y|X) = H(X) + H(Y|X) 
+\end{array}
+\end{equation*}
+(Do $\displaystyle \sum_{j=1}^{n}p(b_{j}|a_{i}) = \displaystyle \sum_{j=1}^{n}\frac{P(b_{j}.a_{i})}{P(a_{i})} = \frac{1}{P(a_{i})}\displaystyle \sum_{j=1}^{n}P(b_{j}.a_{i})=\frac{1}{P(a_{i})}P(a_{i}) =1  $)
+
+
+$H(Y|X) \leq \displaystyle -\sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.$ 
+
+
+\begin{equation}
+\begin{array}{l@{}l}
+H(X,Y)
+	&{}= \displaystyle \sum _{j=1}^{d}\sum_{a \in E_{j}}p(a)H(Y|a) \\
+	&{} \leq \displaystyle \sum _{j=1}^{d}\sum_{a \in E_{j}}p(a)\log_{2}j \\
+	&{} = \displaystyle \sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.
+\end{array}
+\end{equation}
+
+
+$\sigma (\tau_{1}), \sigma (\tau_{2}), .... , \sigma (\tau_{n})$
+
+$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1}))$
+
+$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \frac{1}{n!}\displaystyle \sum _{\tau}\left ( \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})) \right )$
+
+$\Theta(n^{\log_2 2} )$
+\end{document}

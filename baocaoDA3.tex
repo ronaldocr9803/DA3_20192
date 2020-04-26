@@ -1,0 +1,430 @@
+\documentclass[a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=3cm]{geometry}
+%\documentclass{article}
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+
+\usepackage[vietnamese=nohyphenation]{hyphsubst}
+\usepackage[vietnamese]{babel}
+%\setlength{\parindent}{1cm} % Default is 15pt.
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\begin{document}
+\tableofcontents
+
+
+\chapter{CƠ SỞ DỮ LIỆU LỚN}
+
+\chapter{CƠ SỞ DỮ LIỆU PHÂN TÁN}
+
+\chapter{HỆ QUẢN TRỊ CƠ SỞ DỮ LIỆU ORACLE}
+
+\section{Lecture 1}
+Hướng dẫn cài đặt
+
+\section{Lecture 2}
+
+\subsection{Practice 1}
+\noindent
+Đề bài: Create the DEPT table based on the following table instance chart. Place the syntax in a script called lab\_09\_01.sql, then execute the statement in the script to create the table.Confirm that the table is created.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=\textwidth]{l2p1}
+\includegraphics[width=4cm]{l2p1r}
+
+
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài} : Populate the DEPT table with data from the DEPARTMENTS table. Include only columns that you need.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=\textwidth]{l2p2}
+\includegraphics[width=4cm]{l2p2r}
+
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài} : Create the EMP table based on the following table instance chart. Place the syntax in a script called lab\_09\_03.sql, and then execute the statement in the script to create the table. Confirm that the table is created.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=\textwidth]{l2p3}
+\includegraphics[width=4cm]{l2p3r}
+
+\subsection{Practice 4}
+\noindent
+\textbf{Đề bài} : Create the EMPLOYEES2 table based on the structure of the EMPLOYEES table. Include only the EMPLOYEE\_ID, FIRST\_NAME, LAST\_NAME, SALARY, and DEPARTMENT\_ID columns. Name the columns in your new table ID, FIRST\_NAME, LAST\_NAME, SALARY, and DEPT\_ID, respectively.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=5cm]{l2p4}\\
+\includegraphics[width=4cm]{l2p4r}
+
+\subsection{Practice 5}
+\noindent
+\textbf{Đề bài} : Drop the EMP table.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=3cm]{l2p5}\\
+\includegraphics[width=4cm]{l2p5r}
+
+\subsection{Practice 6}
+\noindent
+\textbf{Đề bài} : Create a nonunique index on the DEPT\_ID column in the DEPT table.\\
+
+\textbf{Mã nguồn + kết quả: }
+
+\section{Lecture 3}
+\subsection{Practice 1}
+\noindent
+\textbf{Đề bài} : The staff in the HR department wants to hide some of the data in the EMPLOYEES table. They want a view called EMPLOYEES\_VU based on the employee numbers, employee names, and department numbers from the EMPLOYEES table. They want the heading for the employee name to be EMPLOYEE.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=3cm]{l3p1}\\
+\includegraphics[width=4cm]{l3p1r}
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài} : Confirm that the view works. Display the contents of the EMPLOYEES\_VU view.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=5cm]{l3p2}\\
+\includegraphics[width=7cm]{l3p2r}
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài} : Using your EMPLOYEES\_VU view, write a query for the HR department to display all employee names and department numbers.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=5cm]{l3p3}\\
+\includegraphics[width=7cm]{l3p3r}
+\subsection{Practice 4}
+\noindent
+\textbf{Đề bài} : \\
++ Department 50 needs access to its employee data. Create a view named DEPT50 that contains the employee numbers, employee last names, and department numbers for all employees in department 50. You have been asked to label the view columns EMPNO, EMPLOYEE, and DEPTNO. For security purposes, do not allow an employee to be reassigned to another department through the view.\par
++ Display the structure and contents of the DEPT50 view \par
++ Test your view. Attempt to reassign Mohammed to department 80.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l3p4}\\
+\includegraphics[width=7cm]{l3p4r1}\\
+\includegraphics[width=7cm]{l3p41}\\
+\includegraphics[width=7cm]{l3p4r2}
+
+
+\subsection{Practice 5}
+\noindent
+\textbf{Đề bài} : \\
++ You need a sequence that can be used with the primary key column of the DEPT table. The sequence should start at 200 and have a maximum value of 1,000. Have your sequence increment by 10. Name the sequence DEPT\_ID\_SEQ.  \\
++ To test your sequence, write a script to insert two rows in the DEPT table. Be sure to use the sequence that you created for the ID column. Add two departments: Education and Administration. Confirm your additions. Run the commands in your script\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l3p5}\\
+\includegraphics[width=7cm]{l3p5r}
+
+\subsection{Practice 6}
+\noindent
+\textbf{Đề bài} : Create a synonym for your EMPLOYEES table. Call it EMP.
+\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l3p6}
+
+\section{Lecture 4}
+
+\subsection{Practice 1}
+\noindent
+\textbf{Đề bài} : The following SELECT statement executes successfully: SELECT last\_name, job\_id, salary AS Sal FROM employees; True or False?\\
+
+\textbf{Kết quả: } True
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài} : The following SELECT statement executes successfully: SELECT * FROM job\_grades; True or False?\\
+
+\textbf{Kết quả: } True
+
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài}: There are four coding errors in the following statement. Can you identify them? SELECT employee\_id, last\_name sal x 12 ANNUAL SALARY FROM employees;\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p3}\\
+\includegraphics[width=7cm]{l4p3r}
+
+\subsection{Practice 4}\noindent
+\textbf{Đề bài} : The HR department needs a query to display all unique job codes from the EMPLOYEES table.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p4}\\
+\includegraphics[width=7cm]{l4p4r}
+
+\subsection{Practice 5}\noindent
+\textbf{Đề bài} : The HR department has requested a report of all employees and their job IDs. Display the last name concatenated with the job ID (separated by a comma and space) and name the column Employee and Title.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p5}\\
+\includegraphics[width=7cm]{l4p5r}
+
+\subsection{Practice 6}\noindent
+\textbf{Đề bài} : The HR departments needs to find high-salary and low-salary employees. display the last name and salary of employees who earn between \$5,000 and \$12,000 and are in department 20 or 50. Label the columns Employee and Monthly Salary, respectively.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p6}\\
+\includegraphics[width=7cm]{l4p6r}
+
+\subsection{Practice 7}\noindent
+\textbf{Đề bài} : Create a report to display the last name, salary, and commission of all employees who earn commissions. Sort data in descending order of salary and commissions.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p7}\\
+\includegraphics[width=7cm]{l4p7r}
+
+\subsection{Practice 8}\noindent
+\textbf{Đề bài}: Display the last name of all employees who have both an a and an e in their last name.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p8}\\
+\includegraphics[width=7cm]{l4p8r}
+
+\subsection{Practice 9}\noindent
+\textbf{Đề bài}: Display the last name, job, and salary for all employees whose job is SA\_REP or ST\_CLERK and whose salary is not equal to \$2,500, \$3,500, or \$7,000. \\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l4p9}\\
+\includegraphics[width=7cm]{l4p9r}
+
+\section{Lecture 5}
+\subsection{Practice 1}\noindent
+\textbf{Đề bài}: Write a query that displays the last name (with the first letter uppercase and all other letters lowercase) and the length of the last name for all employees whose name starts with the letters J, A, or M. Give each column an appropriate label. Sort the results by the employees’ last names.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p1}\\
+\includegraphics[width=7cm]{l5p1r}
+
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài}: The HR department wants to find the length of employment for each employee. For each employee, display the last name and calculate the number of months between today and the date on which the employee was hired. Label the column MONTHS\_WORKED. Order your results by the number of months employed. Round the number of months up to the closest
+whole number.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p2}\\
+\includegraphics[width=7cm]{l5p2r}
+
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài}: Display each employee’s last name, hire date, and salary review date, which is the first Monday after six months of service. Label the column REVIEW. Format the dates to appear in the format similar to “Monday, the Thirty-First of July, 2000.”\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p3}\\
+\includegraphics[width=7cm]{l5p3r}
+
+\subsection{Practice 4}
+\noindent
+\textbf{Đề bài}: Create a query that displays the employees’ last names and commission amounts. If
+an employee does not earn commission, show “No Commission.” Label the column COMM.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p4}\\
+\includegraphics[width=7cm]{l5p4r}
+
+\subsection{Practice 5}
+\noindent
+\textbf{Đề bài}: Using the DECODE function, write a query that displays the grade of all employees based on the value of the column JOB\_ID, using the following data:\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p5}\\
+\includegraphics[width=7cm]{l5p5r}
+
+\subsection{Practice 6}
+\noindent
+\textbf{Đề bài}: Find the highest, lowest, sum, and average salary of all employees. Label the columns Maximum, Minimum, Sum, and Average, respectively. Round your results to the nearest whole number.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p6}\\
+\includegraphics[width=7cm]{l5p6r}
+
+\subsection{Practice 7}
+\noindent
+\textbf{Đề bài}: Modify the query in Exercise 1 to display the minimum, maximum, sum, and average salary for each job type.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p7}\\
+\includegraphics[width=7cm]{l5p7r}
+
+\subsection{Practice 8}
+\noindent
+\textbf{Đề bài}: Determine the number of managers without listing them. Label the column Number of Managers.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p8}\\
+\includegraphics[width=7cm]{l5p8r}
+
+\subsection{Practice 9}
+\noindent
+\textbf{Đề bài}: Create a report to display the manager number and the salary of the lowest-paid employee for that manager. Exclude anyone whose manager is not known. Exclude any groups where the minimum salary is \$6,000 or less. Sort the output in descending order of salary.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l5p9}\\
+\includegraphics[width=7cm]{l5p9r}
+
+\section{Lecture 6}
+\subsection{Practice 1}
+\noindent
+\textbf{Đề bài}: The HR department needs a report of all employees. Write a query to display the last name, department number, and department name for all employees.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l6p1}\\
+\includegraphics[width=7cm]{l6p1r}
+
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài}: (A) Create a report to display employees’ last name and employee number along with their manager’s last name and manager number. Label the columns Employee, Emp\#, Manager, and Mgr\#, respectively.\par
+(B) Modify Part A to display all employees including King, who has no manager. Order
+the results by the employee number.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+
+(A)\\
+\includegraphics[width=7cm]{l6p2a}\\
+\includegraphics[width=7cm]{l6p2ar}\\
+
+(B)\\
+\includegraphics[width=7cm]{l6p2b}\\
+\includegraphics[width=7cm]{l6p2br}
+
+
+
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài}: The HR department needs to find the names and hire dates for all employees who were hired before their managers, along with their managers’ names and hire dates.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l6p3}\\
+\includegraphics[width=7cm]{l6p3r}
+
+\subsection{Practice 4}
+\noindent
+\textbf{Đề bài}: Display the employee number, last name, and salary of all employees who earn more than the average salary and who work in a department with any employee whose last name contain a u.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l6p4}\\
+\includegraphics[width=7cm]{l6p4r}
+
+\subsection{Practice 5}
+\noindent
+\textbf{Đề bài}: The HR department needs a report with the following specifications:\\
++ Last name and department ID of all the employees from the EMPLOYEES table, regardless of whether or not they belong to a department. \\
++ Department ID and department name of all the departments from the DEPARTMENTS table, regardless of whether or not they have employees working in them.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l6p5}\\
+\includegraphics[width=7cm]{l6p5r}
+
+\subsection{Practice 6}
+\noindent
+\textbf{Đề bài}: Create a report that lists the employee IDs and job IDs of those employees who currently have a job title that is the same as their job title when they were initially hired by the company (that is, they changed jobs but have now gone back to doing their original job).\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l6p6}\\
+\includegraphics[width=7cm]{l6p6r}
+
+\subsection{Practice 7}
+\noindent
+\textbf{Đề bài}: The HR department needs a list of countries that have no departments located in them. Display the country ID and the name of the countries. Use set operators to create this report.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l6p7}\\
+\includegraphics[width=7cm]{l6p7r}
+
+\section{Lecture 7}\par(Không có bài tập)
+
+\section{Lecture 8}
+\subsection{Practice 1}
+\noindent
+\textbf{Đề bài}: Write a query to display the following for those employees whose manager ID is less than 120:\par
++ Manager ID\par
++ Job ID and total salary for every job ID for employees who report to the same manager\par
++ Total salary of those managers\par
++ Total salary of those managers, irrespective of the job IDs\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l8p1}\\
+\includegraphics[width=7cm]{l8p1r}
+
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài}: Observe the output from question 1. Write a query using the GROUPING function to determine whether the NULL values in the columns corresponding to the GROUP BY expressions are caused by the ROLLUP operation..\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l8p2}\\
+\includegraphics[width=7cm]{l8p2r}
+
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài}: Write a query to display the following for those employees whose manager ID is less than 120:\par
++ Manager ID\par
++ Job and total salaries for every job for employees who report to the same manager\par
++ Total salary of those managers\par
++ Cross-tabulation values to display the total salary for every job, irrespective of the manager\par
++ Total salary irrespective of all job titles.\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l8p3}\\
+\includegraphics[width=7cm]{l8p3r}
+
+\subsection{Practice 4}
+\noindent
+\textbf{Đề bài}: Using GROUPING SETS, write a query to display the following groupings:\par
++ department\_id, manager\_id, job\_id\par
++ department\_id, job\_id\par
++ manager\_id, job\_id\par
+The query should calculate the sum of the salaries for each of these groups..\\
+
+\textbf{Mã nguồn + kết quả: }\\
+\includegraphics[width=7cm]{l8p4}\\
+\includegraphics[width=7cm]{l8p4r}
+
+\section{Lecture 9}\par(Không có bài tập)
+\section{Lecture 10}\par(Không có bài tập)
+\section{Lecture 11}
+\subsection{Practice 1}
+\noindent
+\textbf{Đề bài} : Print last names, salaries, and department IDs.
+\\
+
+\textbf{Mã nguồn + kết quả: }
+\subsection{Practice 2}
+\noindent
+\textbf{Đề bài} : Create a report that shows the hierarchy of the managers for the employee Lorentz.\par+ Don’t display Lorentz
+\par+ Display his immediate manager first.
+\\
+
+\textbf{Mã nguồn + kết quả: }
+\subsection{Practice 3}
+\noindent
+\textbf{Đề bài} : Create an indented report showing the management hierarchy starting from the employee whose LAST\_NAME is Kochhar. Print the employee’s last name, manager ID, and depart-
+ment ID.
+\\
+
+\textbf{Mã nguồn + kết quả: }
+
+
+\chapter{BÀI TẬP KẾT THÚC MÔN}
+
+
+\subsubsection{Sample subsubsection}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+enim ad minim veniam, quis nostrud exercita...
+
+
+
+
+\end{document}
