@@ -52,6 +52,52 @@ H(X,Y)
 \end{array}
 \end{equation}
 
+\textbf{Định lý 1.}  Đặt $M = (m_{ij})$ là ma trận $n \times n$ chỉ chứa hai giá trị 0,1 và đặt $d_{1},...,d_{n}$  là tổng các hàng của ma trận $M$, hay $d_{i} =  \displaystyle \sum _{j=1}^{n}m_{ij}$. Khi đó:
+\begin{equation*}
+    per M \leq \prod_{i=1}^{n}(d_{i}!)^{1/d_{i}}.
+\end{equation*}
+
+\textit{Chứng minh:} Xét $G=(U \cup V,E)$ là đồ thị hai phía tương ứng với ma trận $M$, trong đó $d_{i}$ là bậc tương ứng của các đỉnh $u_{i}$, và kí hiệu $\Sigma$ là tập các \textit{perfect matching} của G. Vì $per M=m(G) = |\Sigma|$ nên thay vì tìm cận trên cho $per M$ như định lý 1, ta sẽ tìm cận trên cho $|\Sigma|$. Giả sử $|\Sigma| \neq 0$ và mỗi $\sigma \in \Sigma$ là một hoán vị tương ứng $\sigma (1) \sigma (2) ....  \sigma (n)$ của các chỉ số. Vì vậy, tương ứng với mỗi giá trị $u_{i} \in U$ là một giá trị $v_{\sigma(i)} \in U$ theo phép song ánh $\sigma$
+\\
+Ý tưởng ban đầu là chọn $\sigma$ một cách ngẫu nhiên và xét biến ngẫu nhiên $X=(X_{1},X_{2},..,X_{n}) = (\sigma(1),\sigma(2),...,\sigma(n)).$
+\\
+Theo mệnh đề \textbf{(A)},
+\begin{equation*}
+H(\sigma (1), \sigma (2), ....  ,\sigma (n)) = \log_{2}(|\Sigma|)
+\end{equation*}
+
+Do đó chỉ cần chỉ ra
+\begin{equation}
+    H(\sigma(1),...,\sigma(n)) \leq \log_{2}(\prod_{i=1}^{n}(d_{i}!)^{1/d_{i}}) = \sum_{i=1}^{n}\frac{1}{d_{i}}\log_{2}(d_{i}!).
+\end{equation}
+
+Sử dụng mệnh đề \textbf{(B)}, ta có
+\begin{equation}
+H(\sigma (1), \sigma (2), ....  ,\sigma (n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (\sigma_{i})| \sigma (1), \sigma (2), ....  ,\sigma (i-1))
+\end{equation}
+
+Ý tưởng của Radhakrishnan là xét các đỉnh  $u_{1}, u_{2}, ....  , u_{n}$ theo một \textit{thứ tự ngẫu nhiên $\tau$} , với xác suất là như nhau và bằng $\frac{1}{n!}$, và lấy giá trị kì vọng của các entropy. Nói cách khác, ta xét các cặp \textit{matching} theo thứ tự $\sigma (\tau (1)), \sigma (\tau (2)), .... , \sigma (\tau (n))$. Xét $\tau$ cố định, khi đó $k_{i} = \tau ^{-1}(i)$ được hiểu là vị trí của $u_{i}$ theo thứ tự ngẫu nhiên $\tau$ là $k_{i}$. Khi đó, biểu thức (2) trở thành:
+\begin{equation*}
+	H(\sigma(1),...,\sigma(n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))
+\end{equation*}
+
+Khi đó
+\begin{equation*}
+	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{\tau}\Bigg(\displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))) \Bigg)
+\end{equation*}
+
+Xét biểu thức 
+\begin{equation}
+H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))
+\end{equation}
+\\
+
+Để tìm cận trên cho , ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big(\sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))\Big)$ và $Y=\sigma(i)$. Với mỗi $\sigma$ đặt $N_{i}(\sigma,\tau)$ là số khả năng ghép cặp còn lại cho
+
+
+
+
+
 
 $\sigma (\tau_{1}), \sigma (\tau_{2}), .... , \sigma (\tau_{n})$
 
