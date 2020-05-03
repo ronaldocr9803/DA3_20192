@@ -29,10 +29,11 @@
 	$H(X) \leq \log_{2}(|supp X|)$. Dấu "$=$" xảy ra khi và chỉ khi X là phân phối đều trên $supp \text{ }X$ (tức $Prob(X=a) = \frac{1}{n}$ với $a \in supp \text{ }X,n=|supp \text{ }X|$ .
 \\
 
-\textit{\underline{Chứng minh:}} Không mất tính tổng quát, giả sử $p_{i} > 0$  $\forall i$. Áp dụng bất đẳng thức \textbf{AM-GM} $a_{1}^{p_{1}}. ... .a_{n}^{p_{n}} \leq p_{1}a_{1}. ... .p_{n}a_{n}$: Đặt $a_{i} = \frac{1}{p_{i}}$ và lấy $\log$ 2 vế, ta được:
+\textit{\underline{Chứng minh:}} Không mất tính tổng quát, giả sử $p_{i} > 0$  $\forall i$. Áp dụng bất đẳng thức \textbf{AM-GM}: $a_{1}^{p_{1}}. ... .a_{n}^{p_{n}} \leq p_{1}a_{1}. ... .p_{n}a_{n}$: Đặt $a_{i} = \frac{1}{p_{i}}$ và lấy $\log$ 2 vế, ta được:
 \begin{equation*}
 H(X) = \displaystyle \sum_{i=1}^{n}p_{i}\log_{2}\frac{1}{p_{i}} \leq \log_{2}\Big(\displaystyle \sum_{i=1}^{n}p_{i}\frac{1}{p_{i}}\Big) = \log_{2}n.
 \end{equation*}
+Dấu "$=$" xảy ra khi và chỉ khi $p_{1} = ... = p_{n} = \frac{1}{n}$
 
 \item 
 	\(H(X,Y) = H(X) + H(Y|X)\), và tổng quát ta có \(H(X_{1},...,X_{n}) = H(X_{1}) + H(X_{2}|X{1}) + ... + H(X_{n}|X_{1},...,X_{n-1})\)
@@ -59,11 +60,13 @@ H(X,Y)
     H(Y|X) \leq \sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.
 \end{equation*}
 \\
-\textit{\underline{Chứng minh:}} Ta có $H(Y|X) = \displaystyle \sum_{i=1}^{m}p(a_{i})H(Y|a_{i}) $. Tiến hành chia tập ${a_{1},...,a_{m}}$ thành các tập con $E_{j}$ theo giả thuyết và sử dụng kết quả từ \textbf{(A)}, ta có:
+\textit{\underline{Chứng minh:}} Ta có $supp(Y|a) = \{b: Prob(Y=b|X=a) > 0 \}$ .Vì $Prob(Y=b|X=a)$ là 1 biến ngẫu nhiên trên tập $supp$ $(Y|a)$ (Do $\displaystyle \sum_{i=1}^{m}Prob(Y=b_{i}|a) =1$) Tiến hành chia tập ${a_{1},...,a_{m}}$ thành các tập con $E_{j}$ theo giả thuyết và sử dụng kết quả từ \textbf{(A)}, ta có:
+%$H(Y|X) = \displaystyle \sum_{i=1}^{m}p(a_{i})H(Y|a_{i}) $.  
 
 \begin{equation*}
 \begin{array}{l@{}l}
 H(X,Y)
+	&{} = \displaystyle \sum_{i=1}^{m}p(a_{i})H(Y|a_{i}) \\
 	&{}= \displaystyle \sum _{j=1}^{d}\sum_{a \in E_{j}}p(a)H(Y|a) \\
 	&{} \leq \displaystyle \sum _{j=1}^{d}\sum_{a \in E_{j}}p(a)\log_{2}j \\
 	&{} = \displaystyle \sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.
@@ -97,26 +100,32 @@ Do đó chỉ cần chỉ ra
 
 Sử dụng mệnh đề \textbf{(B)}, ta có
 \begin{equation}
-H(\sigma (1), \sigma (2), ....  ,\sigma (n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (\sigma_{i})| \sigma (1), \sigma (2), ....  ,\sigma (i-1))
+H(\sigma (1), \sigma (2), ....  ,\sigma (n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (1), \sigma (2), ....  ,\sigma (i-1))
 \end{equation}
-
-Ý tưởng của Radhakrishnan là xét các đỉnh  $u_{1}, u_{2}, ....  , u_{n}$ theo một \textit{thứ tự ngẫu nhiên $\tau$} , với xác suất là như nhau và bằng $\frac{1}{n!}$, và lấy giá trị kì vọng của các entropy. Nói cách khác, ta xét các cặp \textit{matching} theo thứ tự $\sigma (\tau (1)), \sigma (\tau (2)), .... , \sigma (\tau (n))$. Xét $\tau$ cố định, khi đó $k_{i} = \tau ^{-1}(i)$ được hiểu là vị trí của $u_{i}$ theo thứ tự ngẫu nhiên $\tau$ là $k_{i}$. Khi đó, biểu thức (2) trở thành:
+%$\sigma (\tau (1)), \sigma (\tau (2)), .... , \sigma (\tau (n))$
+Ý tưởng của Radhakrishnan là xét các đỉnh  $u_{1}, u_{2}, ....  , u_{n}$ theo một \textit{thứ tự ngẫu nhiên $\tau \in S_{n}$} , với xác suất là như nhau và bằng $\frac{1}{n!}$, và lấy giá trị kì vọng của các entropy. Nói cách khác, ta xét các cặp \textit{matching} theo thứ tự $\tau_{1},\tau_{2},..,\tau_{n}$ . Xét $\tau$ cố định, khi đó $k_{i} = \tau ^{-1}_{i}$ được hiểu là vị trí của $u_{i}$ theo thứ tự ngẫu nhiên $\tau$ là $k_{i}$. Khi đó, biểu thức (2) trở thành:
 \begin{equation*}
-	H(\sigma(1),...,\sigma(n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))
+	H(\sigma(1),...,\sigma(n)) = \displaystyle \sum_{i=1}^{n}H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big)
 \end{equation*}
-
+%H(\sigma(1),...,\sigma(n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))	
 Khi đó
+%\begin{equation*}
+%	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{\tau}\Bigg(\displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))) \Bigg)
+%\end{equation*}
 \begin{equation*}
-	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{\tau}\Bigg(\displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))) \Bigg)
+	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{i=1}^{n}H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big)
 \end{equation*}
 
 Xét biểu thức 
+%\begin{equation}
+%H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))
+%\end{equation}
 \begin{equation}
-H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))
+H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big)
 \end{equation}
 \\
 
-Để tìm cận trên cho , ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big(\sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))\Big)$ và $Y=\sigma(i)$. Với $\tau$ cố đinh $\in S_{n}$ và $\sigma \in \Sigma$ đặt $N_{i}(\sigma,\tau)$ là số các giá trị $k \in [n]$ sao cho $u_{i}v_{k} \in E(G)$ và k $\notin {\Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big)}$ (nói cách khác, $N_{i}(\sigma,\tau)$ là số khả năng còn lại cho $\sigma(i)$ khi đã biết $\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1})$). Vì $deg(u_{i}) = d_{i}$  đồng thời $u_{i}$ phải được ghép cặp trong $\sigma$ nên $1 \leq N_{i}(\sigma,\tau) \leq d_{i} $ với mọi $\sigma \in \Sigma$. Tiến hành chi tập $supp X$ thành các tập con $E_{i,j}^{(\tau)}$ sao cho : 
+Để tìm cận trên cho , ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big( \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1}) \Big)$ và $Y=\sigma(i)$. Với $\tau$ cố định $\in S_{n}$ và $\sigma \in \Sigma$ đặt $N_{i}(\sigma,\tau)$ là số các giá trị $k \in [n]$ sao cho $u_{i}v_{k} \in E(G)$ và k $\notin {\Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big)}$ (nói cách khác, $N_{i}(\sigma,\tau)$ là số khả năng còn lại cho $\sigma(i)$ khi đã biết $\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1})$). Vì $deg(u_{i}) = d_{i}$  đồng thời $u_{i}$ phải được ghép cặp trong $\sigma$ nên $1 \leq N_{i}(\sigma,\tau) \leq d_{i} $ với mọi $\sigma \in \Sigma$. Tiến hành chi tập $supp X$ thành các tập con $E_{i,j}^{(\tau)}$ sao cho : 
 \begin{equation*}
 \Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big) \in E_{i,j}^{(\tau)} <=> N_{i}(\sigma,\tau) = j, \textrm{ với } 1 \leq j \leq d_{i}
 \end{equation*}
@@ -145,9 +154,15 @@ Với mỗi $\sigma$ cố định $\in \Sigma$ và trên từng hoán vị $\tau
 \begin{equation*}
     \displaystyle \sum_{\tau \in S_{n}}P(N_{i}(\sigma,\tau)=j | \sigma)=n!.\frac{1}{d_{i}} = \frac{n!}{d_{i}}
 \end{equation*}
-Và tổng ở (2) trở thành:
+Và biểu thức (2) trở thành:
 \begin{equation*}
-    \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\Sigma|}\displaystyle \sum_{\sigma \in \Sigma}\frac{n!}{d_{i}} \Bigg) = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\Sigma|}.|\Sigma|.\frac{n!}{d_{i}} \Bigg) = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j.\frac{1}{d_{i}} = \frac{\log_{2}d_{i}!}{d_{i}} 
+\begin{array}{l@{}l}
+H(\sigma (1), \sigma (2), ....  ,\sigma (n)) 
+&{}= \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (1), \sigma (2), ....  ,\sigma (i-1)) \\
+&{} =  \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\Sigma|}\displaystyle \sum_{\sigma \in \Sigma}\frac{n!}{d_{i}} \Bigg) \\
+ &{}= \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\Sigma|}.|\Sigma|.\frac{n!}{d_{i}} \Bigg) \\
+ &{}= \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j.\frac{1}{d_{i}} =\displaystyle \sum_{i=1}^{n} \frac{\log_{2}d_{i}!}{d_{i}}  \;\;\;\;\;\; \textrm{              (đpcm)}
+\end{array}
 \end{equation*}
 
 
@@ -155,11 +170,11 @@ Và tổng ở (2) trở thành:
 
 
 
-$\sigma (\tau_{1}), \sigma (\tau_{2}), .... , \sigma (\tau_{n})$
-
-$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1}))$
-
-$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \frac{1}{n!}\displaystyle \sum _{\tau}\left ( \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})) \right )$
-
-$\Theta(n^{\log_2 2} )$
+%$\sigma (\tau_{1}), \sigma (\tau_{2}), .... , \sigma (\tau_{n})$
+%
+%$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1}))$
+%
+%$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \frac{1}{n!}\displaystyle \sum _{\tau}\left ( \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})) \right )$
+%
+%$\Theta(n^{\log_2 2} )$
 \end{document}
