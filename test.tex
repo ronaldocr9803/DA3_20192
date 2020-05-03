@@ -8,6 +8,7 @@
 %\documentclass{article}
 %\usepackage{indentfirst}
 \usepackage{graphicx}
+\usepackage{enumitem}
 
 \usepackage[vietnamese=nohyphenation]{hyphsubst}
 \usepackage[vietnamese]{babel}
@@ -22,9 +23,22 @@
 \titleformat*{\subparagraph}{\large\bfseries}
 
 \begin{document}
+Để chứng minh định lý của Bregman, ta sử dụng 3 mệnh đề dưới đây:
+\begin{enumerate}[label=\textbf{(\Alph*)}]
+\item 
+	$H(X) \leq \log_{2}(|supp X|)$. Dấu "$=$" xảy ra khi và chỉ khi X là phân phối đều trên $supp \text{ }X$ (tức $Prob(X=a) = \frac{1}{n}$ với $a \in supp \text{ }X,n=|supp \text{ }X|$ .
+\\
 
-$H(X) \leq \log_{2}(|supp X|)$
+\textit{\underline{Chứng minh:}} Không mất tính tổng quát, giả sử $p_{i} > 0$  $\forall i$. Áp dụng bất đẳng thức \textbf{AM-GM} $a_{1}^{p_{1}}. ... .a_{n}^{p_{n}} \leq p_{1}a_{1}. ... .p_{n}a_{n}$: Đặt $a_{i} = \frac{1}{p_{i}}$ và lấy $\log$ 2 vế, ta được:
+\begin{equation*}
+H(X) = \displaystyle \sum_{i=1}^{n}p_{i}\log_{2}\frac{1}{p_{i}} \leq \log_{2}\Big(\displaystyle \sum_{i=1}^{n}p_{i}\frac{1}{p_{i}}\Big) = \log_{2}n.
+\end{equation*}
 
+\item 
+	\(H(X,Y) = H(X) + H(Y|X)\), và tổng quát ta có \(H(X_{1},...,X_{n}) = H(X_{1}) + H(X_{2}|X{1}) + ... + H(X_{n}|X_{1},...,X_{n-1})\)
+\\
+
+\textit{\underline{Chứng minh:}}
 \begin{equation*}
 \begin{array}{l@{}l}
 H(X,Y)
@@ -39,18 +53,28 @@ H(X,Y)
 \end{equation*}
 (Do $\displaystyle \sum_{j=1}^{n}p(b_{j}|a_{i}) = \displaystyle \sum_{j=1}^{n}\frac{P(b_{j}.a_{i})}{P(a_{i})} = \frac{1}{P(a_{i})}\displaystyle \sum_{j=1}^{n}P(b_{j}.a_{i})=\frac{1}{P(a_{i})}P(a_{i}) =1  $)
 
+\item 
+	Nếu \(supp\) \(X\) được chia thành d tập \(E_{1},..,E_{d}\) sao cho \(E_{j}:= \{a \in suppX : |supp(Y|a)| = j \} \) thì:
+\begin{equation*}
+    H(Y|X) \leq \sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.
+\end{equation*}
+\\
+\textit{\underline{Chứng minh:}} Ta có $H(Y|X) = \displaystyle \sum_{i=1}^{m}p(a_{i})H(Y|a_{i}) $. Tiến hành chia tập ${a_{1},...,a_{m}}$ thành các tập con $E_{j}$ theo giả thuyết và sử dụng kết quả từ \textbf{(A)}, ta có:
 
-$H(Y|X) \leq \displaystyle -\sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.$ 
-
-
-\begin{equation}
+\begin{equation*}
 \begin{array}{l@{}l}
 H(X,Y)
 	&{}= \displaystyle \sum _{j=1}^{d}\sum_{a \in E_{j}}p(a)H(Y|a) \\
 	&{} \leq \displaystyle \sum _{j=1}^{d}\sum_{a \in E_{j}}p(a)\log_{2}j \\
 	&{} = \displaystyle \sum_{j=1}^{d}Prob(X \in E_{j})\log_{2}j.
 \end{array}
-\end{equation}
+\end{equation*}
+
+\end{enumerate}
+
+
+
+
 
 \textbf{Định lý 1.}  Đặt $M = (m_{ij})$ là ma trận $n \times n$ chỉ chứa hai giá trị 0,1 và đặt $d_{1},...,d_{n}$  là tổng các hàng của ma trận $M$, hay $d_{i} =  \displaystyle \sum _{j=1}^{n}m_{ij}$. Khi đó:
 \begin{equation*}
@@ -92,7 +116,39 @@ H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))
 \end{equation}
 \\
 
-Để tìm cận trên cho , ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big(\sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))\Big)$ và $Y=\sigma(i)$. Với mỗi $\sigma$ đặt $N_{i}(\sigma,\tau)$ là số khả năng ghép cặp còn lại cho
+Để tìm cận trên cho , ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big(\sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))\Big)$ và $Y=\sigma(i)$. Với $\tau$ cố đinh $\in S_{n}$ và $\sigma \in \Sigma$ đặt $N_{i}(\sigma,\tau)$ là số các giá trị $k \in [n]$ sao cho $u_{i}v_{k} \in E(G)$ và k $\notin {\Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big)}$ (nói cách khác, $N_{i}(\sigma,\tau)$ là số khả năng còn lại cho $\sigma(i)$ khi đã biết $\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1})$). Vì $deg(u_{i}) = d_{i}$  đồng thời $u_{i}$ phải được ghép cặp trong $\sigma$ nên $1 \leq N_{i}(\sigma,\tau) \leq d_{i} $ với mọi $\sigma \in \Sigma$. Tiến hành chi tập $supp X$ thành các tập con $E_{i,j}^{(\tau)}$ sao cho : 
+\begin{equation*}
+\Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big) \in E_{i,j}^{(\tau)} <=> N_{i}(\sigma,\tau) = j, \textrm{ với } 1 \leq j \leq d_{i}
+\end{equation*}
+Coi $N_{i}(\sigma,\tau)$ là một biến ngẫu nhiên trên $\Sigma$, ta có:
+\begin{equation*}
+Prob(X \in  E_{i,j}^{(\tau)} ) = Prob( N_{i}(\sigma,\tau) = j)
+\end{equation*}
+Từ mệnh đề \textbf{(C)}, với $\tau$ cố định:
+\begin{equation*}
+\begin{array}{l@{}l}
+H(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})) 
+    &{} \leq \displaystyle \sum_{j=1}^{d_{i}}Prob(|N_{i}(\sigma,\tau)|=j)\log_{2}j \\
+    &{} = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j\displaystyle \sum_{\sigma \in \Sigma}P(\sigma).P(N_{i}(\sigma,\tau)=j | \sigma)  \textrm{ (Do } {\sigma \in \Sigma}  \textrm{ là 1 nhóm đầy đủ)}\\
+    &{} = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j\displaystyle \sum_{\sigma \in \Sigma}\frac{P(N_{i}(\sigma,\tau)=j | \sigma)}{|\Sigma|}
+\end{array}
+\end{equation*}
+
+Kết hợp với ... 
+\begin{equation}
+    H(\sigma (1),...,\sigma (n)) \leq \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg( \frac{1}{n!|\Sigma|} \displaystyle \sum_{\sigma \in \Sigma}\displaystyle \sum_{\tau \in S_{n}}P(N_{i}(\sigma,\tau)=j | \sigma) \Bigg)
+\end{equation}
+
+
+Xét $\displaystyle \sum_{\tau \in S_{n}}P(N_{i}(\sigma,\tau)=j | \sigma)$ \\
+Với mỗi $\sigma$ cố định $\in \Sigma$ và trên từng hoán vị $\tau \in S_{n}$,  $N_{i}(\sigma,\tau)$ nhận các giá trị từ 1 tới $d_{i}$ với xác suất như nhau là $\frac{1}{d_{i}}$, vì $N_{i}(\sigma,\tau)$ chỉ phụ thuộc vào vị trí của $\sigma(i)$ trong hoán vị $\tau$ (do $\sigma$ đã cố định), tương ứng với các đỉnh $k$ thỏa mãn $u_{i}v_{k} \in E(G)$ (Nếu  $\sigma(i)$ là lân cận gần nhất của $i$ theo thứ tự của hoán vị (giả sử là $\tau_{1}$).  Khi đó $N_{i}(\sigma,\tau_{1}) = d_{i}$ và $P(N_{i}(\sigma,\tau_{1})=d_{i} | \sigma)=\frac{1}{d_{i}}$; Nếu  $\sigma(i)$ là lân cận gần thứ hai của $i$ theo thứ tự của hoán vị (giả sử $\tau_{2}$). Khi đó $N_{i}(\sigma,\tau_{2}) = d_{i}-1$ và $P(N_{i}(\sigma,\tau_{2})=d_{i}-1 | \sigma)=\frac{1}{d_{i}}$,...tương tự với n! hoán vị của $S_{n}$ .Do đó, giá trị của biểu thức trên bằng:
+\begin{equation*}
+    \displaystyle \sum_{\tau \in S_{n}}P(N_{i}(\sigma,\tau)=j | \sigma)=n!.\frac{1}{d_{i}} = \frac{n!}{d_{i}}
+\end{equation*}
+Và tổng ở (2) trở thành:
+\begin{equation*}
+    \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\Sigma|}\displaystyle \sum_{\sigma \in \Sigma}\frac{n!}{d_{i}} \Bigg) = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\Sigma|}.|\Sigma|.\frac{n!}{d_{i}} \Bigg) = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j.\frac{1}{d_{i}} = \frac{\log_{2}d_{i}!}{d_{i}} 
+\end{equation*}
 
 
 
