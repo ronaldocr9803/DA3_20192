@@ -1,0 +1,166 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{eufrak}
+\usepackage{listings}
+\usepackage{tabu}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{0pt}
+\pagestyle{plain}
+\pagestyle{fancy}
+%\documentclass{article}
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage[vietnamese=nohyphenation]{hyphsubst}
+\usepackage[vietnamese]{babel}
+%\setlength{\parindent}{1cm} % Default is 15pt.
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+%\newtheorem{theorem}{Định lý}[section]
+
+%\newtheorem*{theorem}{Định lý}[section]
+%\newtheorem{theorem}{Theorem}
+\usepackage{amsthm}
+
+\newtheorem*{theorem}{Định lý } %without numbering
+% \newtheorem{theorem}{Theorem}  %with numberring
+
+\newtheorem{Proposition}{Mệnh đề } %without numbering
+\newtheorem*{Propositionproof}{Chứng minh mệnh đề 1: } %without numbering
+\newtheorem{claim}{Claim}
+%\newtheorem*{proof}{\textbf{Chứng minh định lý} }
+
+
+\begin{document}
+Khác với định thức, có thể tính toán nhanh chóng (sử dụng phép khử Gaussian), việc tính toán với vĩnh thức là khá khó khăn. Một vài nghiên cứu gần đây về vĩnh thức xem xét về xấp xỉ và giới hạn của giá trị này. Trong nội dung bài báo cáo này ta xem xét đến một định lý nổi tiếng về vĩnh thức và chứng minh của nó. Một ma trận thức $M=(m_{ij})$ được gọi là \textit{doubly stochastic} nếu các phần tử của ma trận là các số thực không âm sao cho tổng theo mỗi hàng hoặc mỗi cột bằng $1$. Năm 1926 Bartel L. Vander Waerden đưa ra phỏng đoán: 
+\begin{equation}
+\textrm{per } M \geq \frac{n!}{n^n}
+\end{equation}
+đúng với mọi ma trận \textit{doubly stochastic} $n \times n $ . Dấu "$=$" xảy ra khi và chỉ khi $M=(m_{ij})$, trong đó $m_{ij} = \frac{1}{n}$ với mọi $i$ và $j$
+
+\begin{theorem}
+Đặt $M=(m_{ij})$ là ma trận \textit{doubly stochastic} $n \times n $. Khi đó
+\begin{equation*}
+\textrm{per } M \geq \frac{n!}{n^n}
+\end{equation*}
+Dấu "$=$" xảy ra khi và chỉ khi  $m_{ij} = \frac{1}{n}$ với mọi $i$ và $j$
+\end{theorem}
+\begin{proof}
+Đầu tiên ta sẽ chuyển ma trận về dạng đa thức. Với mọi ma trận $n  \times n$ $M = (m_{ij}) $, ta xây dựng một đa thức $p_M(x) \in R_{[x_1,...,x_n]} $, 
+\begin{equation*}
+	p_M(x) = p_M(x_1,..,x_n) := \displaystyle \prod_{i=1}^{n} \Big( \displaystyle \sum_{j=1}^{n} m_{ij}x_j \Big).
+\end{equation*}
+
+Tiếp theo ta định nghĩa đạo hàm của $p_M(x) \in R_{[x_1,...,x_n]} $  theo biến $x_n$:
+\begin{equation*}
+	 p'(x_1,..,x_{n-1}) := \frac{\partial p(x)}{\partial x_n}\mid _{x_n = 0}
+\end{equation*}
+Quan sát rằng $p$ là đa thức đồng nhất bậc $n$ với $n$ biến, khi đó $p'$ là đa thứ đồng nhất bậc $n-1$ với $n-1$ biến. Tổng quát, với $i=0,1,..,n$
+\begin{equation*}
+	 q_i(x_1,..,x_{i}) := \frac{\partial^{n-i} p(x)}{\partial x_n...\partial x_{i+1}}\mid _{x_n = x_{n-1} = ... = x_{i+1} = 0}
+\end{equation*}
+\end{proof}
+Từ công thức trên ta nhận được một dãy $(q_n,q_{n-1},...,q_0)$, trong đó $q_n=p$ và $q_{i-1} = q_{i}'$ với $1 \leq i \leq n$ và $q_0$ là hệ số của $x_1x_2...x_n$ trong đa thức $p$. Thêm nữa, nếu $p$ là đa thức đồng nhất bậc $n$, thì $q_i$ là đa thức đồng nhất bạc $q_i$. Xét dãy sinh ra bởi đa thức $p_M(x)$,
+\begin{equation*}
+p_M(x) = q_n,...,q_i,...,q_0
+\end{equation*}
+Ta suy ra hai điều quan trọng sau đây: 
+\begin{enumerate}[label=\textbf{\Alph*.}]
+\item $per$ $M$ là hệ số của $x_1x_2...x_n$ trong $q_n$, do đó $q_0 = \textrm{per }M$
+\item Với  $i=1,..,n$ ta có
+\begin{equation*}
+	deg_{i}q_i \leq min\{i,\lambda_M(i)\},
+\end{equation*}
+trong đó $deg_{i}q_i $ kí hiệu là bậc của $x_{j}$ trong $q_i(x_1,...,x_n)$ và $\lambda_M(i)$ là số các giá trị khác 0 trong cột thứ $i$ của ma trận $M$ \\
+Ngoài ra ta còn có $deg_{i}q_i \leq i$ vì $q_i$ là đa thức đồng nhất bậc $i$, trong khi $deg_{i}q_i \leq deg_{i}q_n \leq \lambda_M(i)$ là hiển nhiên theo định nghĩa của $p_M(x)$
+\end{enumerate}
+Sau đây là ý tưởng chính của chứng minh: Ta liên kết một tham số cho mọi đa thức $p$ và xác định một cận dưới khi truyền từ $p$ sang $p'$.\\
+Ta kí hiệu $\mathbb{R}_{+}$ là tập các số thực không âm và $p(x) \in \mathbb{R}_{+[x_1,...,x_n]}$ là đa thức trong đó các hệ số của $p(x)$ là không âm. Với số thức $z \in \mathbb{C}$, đặt $Re(z)$ và $Im(z)$ lần lượt là phần thực và phần ảo của $z$. Đặt $\mathbb{C}_{+} = \{z \in \mathbb{C}: Re(z) \geq 0\}$ và $\mathbb{C}_{++} = \{z \in \mathbb{C}: Re(z) > 0\}$. Kí hiệu này mở rộng với $\mathbb{R}_{+}^{n}$ và $\mathbb{C}_{+}^{n}$. Ví dụ, $z=(z_1,...,z_n) \in \mathbb{C}_{++}^{n}$ đúng nếu $Re(z_i) >0$ với mọi $i$.\\
+Với mọi đa thức $p(x) \in \mathbb{R}_{+[x_1,...,x_n]}$ ta định nghĩa \textbf{capacity} của $p$, kí hiệu $cap(p)$ bởi:
+\begin{equation*}
+\textrm{cap}(p) := \textrm{inf }\{p(x): x \in \mathbb{R}_{+}^{n}, \displaystyle \prod_{i=1}^{n}x_i = 1 \}
+\end{equation*}
+Đặc biệt cap($p$) $\geq 0$ vì p chỉ có các hệ số không âm, và nếu $p$ là hằng số ($p(x) \equiv c$) thì cap($p$) $= c$
+Ngoài ra ta cần hàm $g: \mathbb{N}_{0} \rightarrow \mathbb{R}$ với $g(0) :=1$ và 
+\begin{equation*}
+	g(k) := \Big( \frac{k-1}{k} \Big)^{k-1}  \textrm{                   với    } k \geq 1.
+\end{equation*}
+Sử dụng bất đẳng thức $1 +x \leq e^x$ 2 lần, ta được
+\begin{equation*}
+	\frac{g(k+1)}{g(k)} = \frac{k}{k+1} \Big( \frac{k^2}{k^2 - 1}\Big) ^{k-1} < e^{-\frac{1}{k+1}}e^{\frac{1}{k^2 - 1}} =1
+\end{equation*}
+với $k \geq 1$. Do đó, $g$ là hàm không tăng, $g(0) = g(1) > g(2) > ...$ .\\
+Ta gọi đa thức $p(x) \in \mathbb{R}_{[x_1,...,x_n]}$ là \textit{H-stable} nếu đa thức này không có nghiệm trên $C_{++}^{n}$
+
+\textbf{Mệnh đề Gurvits}
+\textit{Nếu $p(x) \in \mathbb{R}_{+[x_1,...,x_n]}$ là H-stable và đồng nhất bậc $n$, khi đó hoặc $p' \equiv 0$ hoặc $p'$ là H-stable và đồng nhất bậc $n-1$. Trong cả hai trường hợp}
+\begin{equation*}
+ \textrm{cap}(p') \geq \textrm{cap}(p).g(\textrm{deg}_{n}p)
+\end{equation*}
+\begin{proof}
+	\textbf{Chứng minh định lý. }Đặt $M=(m_{ij})$ là ma trận \textit{doubly stochastic} $n \times n$. Ta đã biết $p_M(x)$ là đa thức đồng nhất bậc n.
+\begin{claim}
+	$p_M(x)$ là H-stable
+\end{claim}
+Bằng phản chứng, giả sử $x$ là nghiệm của $p_M(x)$. Từ $p_M(x) = \prod_{i=1}^{n} (\sum_{j=1}^{n} m_{ij}x_{j}) =0$ suy ra $\sum_{j=1}^{n} m_{ij}x_{j} =0$ nên $\sum_{j=1}^{n} m_{ij}Re(x_{j}) =0$. Điều này trái với giả thiết $x \in \mathbb{C}^{n}_{++}$, vì $m_{il} > 0$ với một vài giá trị $l$. 
+\begin{claim}
+	$cap(p_M) =1$
+\end{claim}
+\begin{proof}
+	Trước tiên ta nhắc lại bất đẳng thức $AM-GM$: Với $a_1,...,a_n, p_1,..,p_n \in \mathbb{R}_{+}$ thoả mãn $\sum_{i=1}^{n}p_{i} =1$ ta có
+	\begin{equation*}
+	\displaystyle \sum_{i=1}^{n} p_{i}a_{i} \geq a_{1}^{p_1}...a_{n}^{p_n}.
+\end{equation*}
+Chọn bất kì giá trị $x \in \mathbb{R}_{+}^{n}$ với $\prod_{j=1}^{n}x_{j} =1$. Áp dụng bất đẳng thức AM-GM:
+\begin{equation*}
+\begin{array}{l@{}l}
+	p_M(x) = \displaystyle \prod_{i=1}^{n} \Big( \displaystyle \sum_{j=1}^{n} m_{ij}x_{j} \Big) &{}\geq \displaystyle \prod_{i=1}^{n} \displaystyle\prod_{j=1}^{n} x_{j}^{m_{ij}} \\
+	&{}= \displaystyle\prod_{j=1}^{n}\displaystyle \prod_{i=1}^{n}x_{j}^{m_{ij}} = \displaystyle\prod_{j=1}^{n} x_j^{\sum_{i=1}^{n} m_{ij}} \\
+	&{}= \displaystyle\prod_{j=1}^{n} x_j =1
+\end{array}
+\end{equation*}
+do đó $cap(p_M) \geq 1$. \\
+Mặt khác,
+\begin{equation}
+	p_M(1,1,...,1) = \displaystyle \prod_{i=1}^{n} \Big (\displaystyle \sum_{j=1}^{n} m_{ij} \Big) = \displaystyle\prod_{i=1}^{n} 1 =1,
+\end{equation}
+\end{proof} 
+Vì $p_M(x)$ là \textit{H-stable}, ta có thể áp dụng mệnh đề $Gurvits$ nhiều lần để đưa ra kết luận mọi đa thức $q_i$ đều là \textit{H-stable}, sao cho với mỗi giá trị của $i$:
+\begin{equation}
+	cap(q_{i-1}) \geq cap(q_i)g(deg_{i}q_i) \geq cap(q_i)g(min \{i, \lambda_{M}(i)\}), 
+\end{equation}
+trong đó bất đẳng thức thứ hai được suy ra từ với $g$ là hàm giảm\\ 
+Lặp lại     bắt đầu với $cap(p_M) =1$, ta có:
+\begin{equation*}
+\begin{array}{l@{}l}
+	per M 
+	= q_0 &{}\geq \displaystyle \prod_{i=1}^{n} g(min \{i,\lambda_M(i) \} )\\
+	&{}\geq \displaystyle \prod_{i=1}^{n}g(i) = \displaystyle \prod_{i=1}^{n} \Bigg( \frac{i-1}{i} \Bigg)^{i-1} = \displaystyle \prod_{i=1}^{n}i\frac{(i-1)^{i-1}}{i^i} = \frac{n!}{n^n}
+\end{array}
+\end{equation*}
+
+
+
+\end{proof}
+\end{document}
+
+

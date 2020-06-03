@@ -1,0 +1,84 @@
+\documentclass[a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=3cm]{geometry}
+%\documentclass{article}
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\usepackage[vietnamese=nohyphenation]{hyphsubst}
+\usepackage[vietnamese]{babel}
+%\setlength{\parindent}{1cm} % Default is 15pt.
+
+\usepackage{titlesec}
+\usepackage{tabu}
+
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\usepackage{array}
+\renewcommand{\arraystretch}{1.5}
+
+
+\begin{document}
+Hình vuông latin là một trong số những hình tổ hợp lâu đời nhất, có những nghiên cứu rõ ràng từ thời cổ đại. Để có được hình vuông Latin, ta phải điền vào $n^{2}$ ô của một mảng các ô vuông kích thước $n \times n$ các số $1,2,..,n$ sao cho mỗi số điền vào chỉ xuất hiện đúng một lần ở mỗi hàng và mỗi cột chứa số đó. Nói cách khác, mỗi hàng và mỗi cột này là một hoán vị của tập ${1,2,...,n}$. Khi đó ta nói đó là hình vuông Latin bậc n
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+     1&2&3&4  \\ \hline
+     2&1&4&3  \\ \hline
+     4&3&1&2  \\ \hline
+     3&4&2&1  \\
+     \hline
+\end{tabular}
+\end{center}
+Ta xét bài toán: Xác định số hình vuông latin $L(n)$ bậc $n$. Xét một vài ví dụ nhỏ :\\
+$n=1$:
+\begin{tabular}{|c|}
+    \hline
+     1 \\ \hline
+    
+\end{tabular}: ~~~ $L(1) = 1$
+\vspace{20pt}
+\\
+$n=2$:
+\begin{tabular}{|c|c|}
+    \hline
+     1&2 \\ \hline
+     2&1 \\ 
+     \hline
+\end{tabular} ~~~ \begin{tabular}{|c|c|}
+    \hline
+     2&1 \\ \hline
+     1&2 \\ 
+     \hline
+\end{tabular}: ~~~ $L(2) = 2$
+\vspace{20pt}
+\\
+$n=3$:
+\begin{tabular}{|c|c|c|}
+	\hline
+	1&2&3 \\ \hline
+	2&3&1 \\ \hline
+	3&1&2 \\
+	\hline
+\end{tabular}: ~~~ $L(3) = 12$
+
+\begin{equation*}
+L(1) = 1, L(2) = 2, L(3) = 12, L(4) = 576, L(5) = 161280
+\end{equation*}
+Ta thấy khi n lớn, thì số lượng hình vuông Latin bậc n tăng rất nhanh. 
+
+
+
+
+\end{document}
