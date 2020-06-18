@@ -1,0 +1,5 @@
+\babel@toc {english}{}
+\beamer@subsectionintoc {0}{1}{V\IeC {\~\i }nh th\IeC {\'\uhorn }c}{3}{0}{0}
+\beamer@subsectionintoc {0}{2}{H\IeC {\`\i }nh vu\IeC {\^o}ng Latin}{4}{0}{0}
+\beamer@subsectionintoc {0}{3}{Ph\IeC {\^a}n t\IeC {\'\i }ch h\IeC {\`\ocircumflex }i quy}{9}{0}{0}
+\beamer@subsectionintoc {0}{4}{Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{11}{0}{0}

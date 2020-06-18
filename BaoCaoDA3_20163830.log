@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.24)  3 JUN 2020 09:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.24)  15 JUN 2020 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -817,26 +817,27 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen194
 \titlewidthfirst=\dimen195
 )
-\c@Proposition=\count149
-\c@claim=\count150
+\c@theoremnum=\count149
+\c@Proposition=\count150
+\c@claim=\count151
 
 (./BaoCaoDA3_20163830.aux)
 \openout1 = `BaoCaoDA3_20163830.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -874,16 +875,16 @@ LaTeX Font Info:    ... okay on input line 54.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
+\scratchcounter=\count152
 \scratchdimen=\dimen196
 \scratchbox=\box55
-\nofMPsegments=\count152
-\nofMParguments=\count153
+\nofMPsegments=\count153
+\nofMParguments=\count154
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count154
+\MPscratchCnt=\count155
 \MPscratchDim=\dimen197
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
+\MPnumerator=\count156
+\makeMPintoPDFobject=\count157
 \everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -937,32 +938,31 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count157
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+\c@lstlisting=\count158
+
+(./BaoCaoDA3_20163830.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 55.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 4.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
+))
+\tf@toc=\write4
+\openout4 = `BaoCaoDA3_20163830.toc'.
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
+ [1
 
-[1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
 Ch\uhorn \ohorn ng 1.
@@ -970,92 +970,88 @@ Ch\uhorn \ohorn ng 1.
 
 ]
 
-Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 17.97171pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[4] [5] [6]
+[4] [5] [6] [7]
 Ch\uhorn \ohorn ng 2.
-[7
+[8
 
 ]
-<funcEntropy.png, id=45, 190.7125pt x 167.62625pt>
+<funcEntropy.png, id=48, 190.7125pt x 167.62625pt>
 File: funcEntropy.png Graphic file (type png)
 <use funcEntropy.png>
-Package pdftex.def Info: funcEntropy.png  used on input line 206.
+Package pdftex.def Info: funcEntropy.png  used on input line 207.
 (pdftex.def)             Requested size: 199.16928pt x 175.06636pt.
- [8 <./funcEntropy.png>] [9]
-Overfull \hbox (26.17831pt too wide) detected at line 270
+ [9 <./funcEntropy.png>] [10]
+Overfull \hbox (26.17831pt too wide) detected at line 278
 []
  []
 
-[10] [11]
+[11] [12]
 Ch\uhorn \ohorn ng 3.
-<ex1.png, id=60, 284.06125pt x 245.91875pt>
+<ex1.png, id=63, 284.06125pt x 245.91875pt>
 File: ex1.png Graphic file (type png)
 <use ex1.png>
-Package pdftex.def Info: ex1.png  used on input line 303.
+Package pdftex.def Info: ex1.png  used on input line 311.
 (pdftex.def)             Requested size: 227.62204pt x 197.06546pt.
-[12
+[13
 
  <./ex1.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 307.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 315.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 307.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 315.
 
-[13]
-LaTeX Font Info:    Try loading font information for U+euf on input line 411.
+[14]
+LaTeX Font Info:    Try loading font information for U+euf on input line 426.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [14]
-<ex2.png, id=72, 186.6975pt x 148.555pt>
+) [15]
+<ex2.png, id=75, 186.6975pt x 148.555pt>
 File: ex2.png Graphic file (type png)
 <use ex2.png>
-Package pdftex.def Info: ex2.png  used on input line 432.
+Package pdftex.def Info: ex2.png  used on input line 447.
 (pdftex.def)             Requested size: 199.16928pt x 158.4853pt.
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 456--458
-
- []
-
-[16 <./ex2.png>]
-Overfull \hbox (60.25754pt too wide) detected at line 475
+[16]
+Overfull \hbox (60.25754pt too wide) detected at line 490
 []
  []
 
+[17 <./ex2.png>]
 
 Package amsthm Warning: The \qedhere command may not work correctly here on inp
-ut line 495.
+ut line 510.
 
-[17]
+[18]
 Ch\uhorn \ohorn ng 4.
-[18
+[19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 557--565
+Underfull \hbox (badness 10000) in paragraph at lines 572--580
 
  []
 
-<ex3.png, id=87, 208.78pt x 225.84375pt>
+<ex3.png, id=91, 208.78pt x 225.84375pt>
 File: ex3.png Graphic file (type png)
 <use ex3.png>
-Package pdftex.def Info: ex3.png  used on input line 566.
+Package pdftex.def Info: ex3.png  used on input line 581.
 (pdftex.def)             Requested size: 199.16928pt x 215.4601pt.
-[19] [20 <./ex3.png>] [21] [22] (./BaoCaoDA3_20163830.aux) ) 
+[20] [21 <./ex3.png>] [22] [23] (./BaoCaoDA3_20163830.aux) ) 
 Here is how much of TeX's memory you used:
- 18062 strings out of 492616
- 327338 string characters out of 6129480
- 400814 words of memory out of 5000000
- 21586 multiletter control sequences out of 15000+600000
+ 18080 strings out of 492616
+ 327536 string characters out of 6129480
+ 400960 words of memory out of 5000000
+ 21601 multiletter control sequences out of 15000+600000
  23099 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,48p,1362b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,48p,1378b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive
 /2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/
 2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texli
@@ -1075,10 +1071,10 @@ onts/type1/vntex/vnr/vnbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
 /vntex/vnr/vnr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/vntex/vnr/
 vnsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb
 >
-Output written on BaoCaoDA3_20163830.pdf (22 pages, 334735 bytes).
+Output written on BaoCaoDA3_20163830.pdf (23 pages, 326813 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 163 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
