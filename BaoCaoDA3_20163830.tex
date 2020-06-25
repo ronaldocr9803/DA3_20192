@@ -50,25 +50,149 @@
 \newtheorem{Proposition}{Mệnh đề } %without numbering
 \newtheorem*{Propositionproof}{Chứng minh mệnh đề 1: } %without numbering
 \newtheorem{claim}{Khẳng định}
+\lfoot{\textit{Lai Đức Thắng}}
+
+\rfoot{\textit{Toán Tin K61}}
+\renewcommand{\footrulewidth}{1,2pt}
+
 
 
 \begin{document}
+
+
+
+	\begin{titlepage} % Đây là trang bìa
+
+
+			\begin{center}
+				
+				{\large\bf TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI}\\
+				
+				{\large\bf VIỆN TOÁN ỨNG DỤNG VÀ TIN HỌC} \\
+				
+				{———————o0o——————–}
+				\vskip 1cm
+%			\includegraphics[scale=0.3]{Logo_Hust}
+				\begin{center}
+     				\includegraphics[scale=.85]{biaDA.png}
+				\end{center}
+				\vskip 1cm
+				
+%				{\Large\bf \textbf{PHƯƠNG PHÁP\\ 
+%						PHÂN TÍCH THÀNH PHẦN CHÍNH\\
+%						(Principal Component Analysis - PCA )
+%				}}
+
+				{\Large\bf \textbf{VĨNH THỨC
+						VÀ ỨNG DỤNG TRONG\\ BÀI TOÁN ĐẾM TỔ HỢP\\
+				}}
+				\vskip 1cm
+				{\bf ĐỒ ÁN III}
+				
+				
+				{\bf {\it Chuyên ngành:} TOÁN TIN}\\
+				{\bf {\it Chuyên sâu:} }Xác suất rời rạc
+				
+				\vskip 1cm
+				
+				\begin{tabular}{r l}
+					
+					Giảng viên hướng dẫn:&{\bf TS. TRẦN MẠNH TUẤN }\\[0.5cm]
+					
+					Họ và tên sinh viên:&{\bf LAI ĐỨC THẮNG}\\[0.5cm]
+					
+					Số hiệu sinh viên:&{\bf 20163830}\\[0.5cm]
+					Lớp:&{\bf Toán Tin K61}
+					
+				\end{tabular}
+				
+				\vfill
+				
+				{\bf HÀ NỘI - 2020}
+				
+			\end{center}
+			
+	\end{titlepage}
+
+%\begin{titlepage}
+%\begin{center}
+%	\textbf{NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN}
+%\end{center}
+%\textbf{1. Mục đích và nội dung của đồ án:}\\
+%
+%\dotfill
+%
+%\dotfill
+%
+%\dotfill
+%
+%\dotfill
+%\\
+%\textbf{2. Kết quả đạt được:}\\
+%
+%\dotfill
+%
+%\dotfill
+%
+%\dotfill
+%\\
+%\textbf{3. Ý thức làm việc của sinh viên:}\\
+%
+%\dotfill
+%
+%\dotfill
+%
+%\dotfill
+%
+%\dotfill
+%\\
+%\vskip0.2cm
+%\begin{tabular}{ c c}
+%	\hspace{7.5cm}    &  {Hà Nội, ngày \quad tháng \quad năm 2020} \\
+%	& {Giảng viên hướng dẫn} \\
+%		& \textit{(Kí và ghi rõ họ tên)} \\
+%\end{tabular}
+%\end{titlepage}
 %$\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 %$\mathcal{M}$
 \tableofcontents
-\chapter*{Lời mở đầu}
 \addcontentsline{toc}{chapter}{Lời mở đầu}
 
+\chapter*{Lời mở đầu}
+
+Để xác định các tính chất của một ma trận, sẽ rất hữu ích khi ta nghiên cứu một số hàm liên quan đến các thành phần của một ma trận. Do đó, trong báo cáo đồ án III này, em xin trình bày về một trong những hàm đó, vĩnh thức, các tính chất, bất đẳng thức liên quan đến vĩnh thức của một ma trận và áp dụng để giải quyết bài toán đếm tổ hợp: xác định số hình vuông Latin bậc n.
+Bố cục của đồ án “Vĩnh thức và ứng dụng trong bài toán đếm tổ hợp” bao gồm:
+\begin{itemize}
+	\item \textbf{Chương 1: Vĩnh thức}
+		\par \setlength{\parindent}{5ex} Khái niệm vĩnh thức của ma trận M (ký hiệu: per(M)) và chứng minh phỏng đoán của Van der Waerden để tìm chặn dưới phù hợp cho vĩnh thức.
+
+	\item \textbf{Chương 2: Lý thuyết thông tin} 
+	\par \setlength{\parindent}{5ex} Trình bày kiến thức cơ sở lý thuyết về thông tin và độ đo cơ bản của thông tin là Entropy; khái niệm về entropy có điều kiện và một số quan hệ giữa các đại lượng trong entropy có điều kiện
+
+	\item \textbf{Chương 3: Entropy trong bài toán Vĩnh thức}
+	\par \setlength{\parindent}{5ex} Nhắc lại các khái niệm cơ bản về đồ thị, đồ thị hai phía, mối liên hệ giữa ma trận M/{0,1} và đồ thị hai phía: số lượng các ghép cặp hoàn hảo = per(M), từ đó sử dụng entropy từ lý thuyết thông tin để chứng minh một định lý về vĩnh thức của  Brégman, thông qua đó xác định được một chặn trên phù hợp cho giá trị này.
+	\item \textbf{Chương 4: Hình vuông Latin}
+	\par \setlength{\parindent}{5ex} Giới thiệu hình vuông Latin và ứng dụng của vĩnh thức trong bài toán tổ hợp tìm số hình vuông Latin bậc n. \\ 
+	Em xin chân thành cảm ơn thầy Trần Mạnh Tuấn đã trực tiếp hướng dẫn và chỉ ra những điểm còn thiếu sót trong bài để em nhanh chóng khắc phục và hoàn thành bài báo cáo một cách tốt nhất.
+	Do kiến thức còn hạn hẹp không tránh khỏi những thiếu sót trong cách hiểu và trình bày. Em rất mong nhận được sự đóng góp ý kiến của quý thầy cô để bản báo cáo của em đạt được kết quả tốt hơn.
+	Em xin chân thành cảm ơn!
+
+
+
+\end{itemize}
 
 
 
 
-\hspace*{7cm}\textit{Hà Nội, tháng 6 năm 2020}
+
+\hspace*{9cm}\textit{Hà Nội, tháng 6 năm 2020}
 	
-\hspace*{8cm}\text{Sinh viên thực hiện}
+\hspace*{9.5cm}\text{Sinh viên thực hiện}
 	
-\hspace*{9cm}\text{Lai Đức Thắng}
+\hspace*{10cm}\text{Lai Đức Thắng}
+
 \chapter{Vĩnh thức}
+Nội dung chính của chương này dựa theo chương 24 của cuốn sách ‘‘Proofs from THE BOOK’’, Martin Aigner, Günter M. Ziegler, , $6^{th}$ Edition.
 \section{Khái niệm}
 Giả sử $M= (m_{ij})$ là ma trận số thức $n \times n$. Khi đó vĩnh thức (Permanents) của ma trận $M$ (kí hiệu là $per$):
 \begin{equation*}
@@ -76,7 +200,7 @@ per M = \displaystyle \sum_{\sigma \in S_{n}}m_{1\sigma(1)}m_{2\sigma(2)}...m_{n
 \end{equation*}
 trong đó $S_{n}$ là tập tất cả các hoán vị của $\{1,2,...,n\}$.
 \section{Phỏng đoán của Van der Waerden}
-Khác với định thức, có thể tính toán nhanh chóng (sử dụng phép khử Gaussian), việc tính toán với vĩnh thức là khá khó khăn. Một vài nghiên cứu gần đây về vĩnh thức xem xét về xấp xỉ và giới hạn của giá trị này. Trong nội dung bài báo cáo này ta xem xét đến một định lý nổi tiếng về vĩnh thức và chứng minh của nó. Một ma trận $M=(m_{ij})$ được gọi là \textit{ngẫu nhiên kép} (\textit{doubly stochastic}) nếu các phần tử của ma trận là các số thực không âm sao cho tổng theo mỗi hàng hoặc mỗi cột bằng $1$. Năm 1926 Bartel L. Vander Waerden đưa ra phỏng đoán: 
+Khác với định thức, có thể tính toán nhanh chóng (sử dụng phép khử Gauss ), việc tính toán với vĩnh thức là khá khó khăn. Một vài nghiên cứu gần đây về vĩnh thức xem xét về xấp xỉ và giới hạn của giá trị này. Trong nội dung bài báo cáo này ta xem xét đến một định lý nổi tiếng về vĩnh thức và chứng minh của nó. Một ma trận $M=(m_{ij})$ được gọi là \textit{ngẫu nhiên kép} (\textit{doubly stochastic}) nếu các phần tử của ma trận là các số thực không âm sao cho tổng theo mỗi hàng hoặc mỗi cột bằng $1$. Năm 1926 Bartel L. Vander Waerden đưa ra phỏng đoán: 
 \begin{equation*}
 \textrm{per } M \geq \frac{n!}{n^n}
 \end{equation*}
@@ -101,7 +225,7 @@ Quan sát rằng $p$ là đa thức thuần nhất bậc $n$ với $n$ biến, k
 \begin{equation*}
 	 q_i(x_1,..,x_{i}) := \frac{\partial^{n-i} p(x)}{\partial x_n...\partial x_{i+1}}\mid _{x_n = x_{n-1} = ... = x_{i+1} = 0}
 \end{equation*}
-Từ công thức trên ta nhận được một dãy $(q_n,q_{n-1},...,q_0)$, trong đó $q_n=p$ và $q_{i-1} = q_{i}'$ với $1 \leq i \leq n$ và $q_0$ là hệ số của $x_1x_2...x_n$ trong đa thức $p$. Thêm nữa, nếu $p$ là đa thức thuần nhất bậc $n$, thì $q_i$ là đa thức thuần nhất bạc $q_i$. Xét dãy sinh ra bởi đa thức $p_M(x)$,
+Từ công thức trên ta nhận được một dãy $(q_n,q_{n-1},...,q_0)$, trong đó $q_n=p$ và $q_{i-1} = q_{i}'$ với $1 \leq i \leq n$ và $q_0$ là hệ số của $x_1x_2...x_n$ trong đa thức $p$. Thêm nữa, nếu $p$ là đa thức thuần nhất bậc $n$, thì $q_i$ là đa thức thuần nhất bậc $q_i$. Xét dãy sinh ra bởi đa thức $p_M(x)$,
 \begin{equation*}
 p_M(x) = q_n,...,q_i,...,q_0
 \end{equation*}
@@ -145,13 +269,14 @@ Ta gọi đa thức $p(x) \in \mathbb{R}_{[x_1,...,x_n]}$ là \textit{H-ổn đ�
 \end{claim}
 Bằng phản chứng, giả sử $x$ là nghiệm của $p_M(x)$. Từ $p_M(x) = \prod_{i=1}^{n} (\sum_{j=1}^{n} m_{ij}x_{j}) =0$ suy ra $\sum_{j=1}^{n} m_{ij}x_{j} =0$ nên $\sum_{j=1}^{n} m_{ij}Re(x_{j}) =0$. Điều này trái với giả thiết $x \in \mathbb{C}^{n}_{++}$, vì $m_{il} > 0$ với một vài giá trị $l$. 
 \begin{claim}
+	$\hbox{cap}(p_M)$
 	$cap(p_M) =1$
 \end{claim}
 \begin{proof}
 	Trước tiên ta nhắc lại bất đẳng thức $AM-GM$: Với $a_1,...,a_n, p_1,..,p_n \in \mathbb{R}_{+}$ thoả mãn $\sum_{i=1}^{n}p_{i} =1$ ta có
-	\begin{equation*}
-	\displaystyle \sum_{i=1}^{n} p_{i}a_{i} \geq a_{1}^{p_1}...a_{n}^{p_n}.
-\end{equation*}
+	\begin{equation}
+		\displaystyle \sum_{i=1}^{n} p_{i}a_{i} \geq a_{1}^{p_1}...a_{n}^{p_n}. \label{amgm}
+	\end{equation}
 Chọn bất kì giá trị $x \in \mathbb{R}_{+}^{n}$ với $\prod_{j=1}^{n}x_{j} =1$. Áp dụng bất đẳng thức AM-GM:
 \begin{equation*}
 \begin{array}{l@{}l}
@@ -186,7 +311,11 @@ Lặp lại  \eqref{iterate}   bắt đầu với $cap(p_M) =1$, ta có:
 %\chapter{Entropy và bài toán vĩnh thức}
 \chapter{Lý thuyết thông tin}
 \section{Khái niệm}
+Lý thuyết thông tin (Information Theory) là một nhánh toán ứng dụng quan tâm đến các vấn đề định lượng (quantification), lưu trữ (storage) và truyền thông (communication) của thông tin.Lý thuyết thông tin được khởi xướng bởi Claude E. Shannon vào năm 1948 với bài báo khoa học có tiêu đề “A Mathematical Theory of Communication” đặt nền móng nghiên cứu nền tảng về các giới hạn liên quan đến xử lí tín hiệu (signal processing) và các thao tác truyền thông (communication operations) như nén dữ liệu. Phần lớn ứng dụng của lý thuyết thông tin thường liên quan đến việc nén dữ liệu (ZIP, MP3, JPEG,…) và mã hóa kênh (truyền dữ liệu số qua đường dây điện thoại,…).
+
+
 \section{Entropy}
+Trong lý thuyết thông tin, một độ đo cơ bản của thông tin là entropy, thường được diễn đạt dưới dạng số lượng bit cần thiết trung bình để lưu trữ hoặc dẫn truyền. Entropy lượng hóa sự không chắc chắn trong việc dự đoán giá trị của một biến ngẫu nhiên. Ví dụ như, xác định kết quả của một lần tung đồng xu công bằng (hai kết quả có khả năng như nhau) cho ít thông tin hơn (entropy nhỏ hơn) là xác định kết quả của một lần tung xúc sắc (sáu kết quả có khả năng như nhau).\\
 Giả sử X là một biến ngẫu nhiên nhận các giá trị $\{a_{1},...,a_{n}\}$ với xác suất $Pr(X=a_{i}) = p_{i}$. Nó giúp ta suy nghĩ về việc coi $X$ là một phép thử với các khả năng là $a_{i}$, giống như việc tung một xúc xắc với các khả năng là số chấm trên xúc xắc đó ${1,2,3,4,5,6}$. Vậy lượng thông tin (về trung bình) nhận được từ phép thử trên là bao nhiêu? 
 
 Với biến ngẫu nhiên rời rạc  $X$ nhận các giá trị $\mathscr{X}=\{x_{1},...,x_{n}\}$ và hàm phân phối xác suất $Pr(X)$ thì Entropy của $X$ là:
@@ -201,14 +330,15 @@ H(X) = -\displaystyle \sum_{i=1}^{n}Pr(x_i)\log_{2}Pr(x_i)
 \begin{equation*}
 H(X) = -\displaystyle \sum_{i=1}^{n}p_i\log_{2}p_i
 \end{equation*}
-Xét một ví dụ, nếu X là sự kiện tung một đồng xu với $Pr(X = \textrm{ngửa}) = p$, khi đó theo công thức của Shannon cho ta hàm $H(X_{p,1-p}) = -p\log_{2}p-(1-p)\log_{2}(1-p)$ (hình \ref{fig:t}).
-\begin{figure}
-\begin{center}
-	\includegraphics[width=7cm]{funcEntropy}\\
-	\caption{x}
-	\label{fig:t}
-\end{center}
-\end{figure}
+Xét một ví dụ, nếu X là sự kiện tung một đồng xu với $Pr(X = \textrm{ngửa}) = p$, khi đó theo công thức của Shannon cho ta hàm $H(X_{p,1-p}) = -p\log_{2}p-(1-p)\log_{2}(1-p)$ 
+%(hình \ref{fig:t}).
+%\begin{figure}
+%\begin{center}
+%	\includegraphics[width=7cm]{funcEntropy}\\
+%	\caption{}
+%	\label{fig:t}
+%\end{center}
+%\end{figure}
 \section{Entropy có điều kiện}
 Giả sử $X$ và $Y$ là hai biến ngẫu nhiên nhận các giá trị lần lượt $\{a_1,..,a_m\}$ và $\{b_1,..,b_n\}$. Entropy hợp (\textit{joint entropy}) của 2 biến ngẫu nhiên $X$ và $Y$ là:
 \begin{equation*}
@@ -229,23 +359,23 @@ Sau đây ta sẽ xem một số mối quan hệ giữa các đại lượng ở
 Giả sử $X$ và $Y$ là hai biến ngẫu nhiên nhận các giá trị trong tập $\mathscr{X}$ và $\mathscr{Y}$. Ta có một số kết quả sau:
 \end{Proposition}
 \begin{enumerate}[label=\textbf{(\Alph*)}]
-\item \(H(X) \leq \log_{2}(|supp X|)\).
+\item \(H(X) \leq \log_{2}(|supp X|)\). Dấu "$=$"  xảy ra khi và chỉ khi $X$ là phân phối đều trên $supp \textrm{ X}$, tức $Pr(X=a) = \frac{1}{n}$ với $a \in \textrm{supp }X$, $n=|\textrm{supp }X|$
 \item \(H(X,Y) = H(X) + H(Y|X)\), và tổng quát ta có \(H(X_{1},...,X_{n}) = H(X_{1}) + H(X_{2}|X{1}) + ... + H(X_{n}|X_{1},...,X_{n-1})\).
 \item \(H(X,Y) \leq H(X) + H(Y|X)\) . Dấu "$=$" xảy ra khi và chỉ khi $X$ và $Y$ là độc lập.
-\item \(H(X,Y) \leq H(X) \).
+%\item \(H(X,Y) \leq H(X) \).
 \item Nếu \(supp\) \(X\) được chia thành $d$ tập \(E_{1},..,E_{d}\) sao cho \(E_{j}:= \{a \in suppX : |supp(Y|a)| = j \} \) thì:
 \begin{equation*}
     H(Y|X) \leq \sum_{j=1}^{d}Pr(X \in E_{j})\log_{2}j.
 \end{equation*}
 \end{enumerate}
-Trước khi đi vào chứng minh, ta nhắc lại bất đẳng thức $AM-GM$: 
-\begin{equation*}
-	a_{1}^{p_{1}}. ... .a_{n}^{p_{n}} \leq p_{1}a_{1}. ... .p_{n}a_{n}
-\end{equation*}
+%Trước khi đi vào chứng minh, ta nhắc lại bất đẳng thức $AM-GM$: 
+%\begin{equation*}
+%	a_{1}^{p_{1}}. ... .a_{n}^{p_{n}} \leq p_{1}a_{1}. ... .p_{n}a_{n}
+%\end{equation*}
 
-\textbf{Chứng minh mệnh đề 1: }
+\begin{proof}[Chứng minh mệnh đề 1]\textit{ }
 \begin{enumerate}[label=(\Alph*)]
-\item Không mất tính tổng quát, giả sử $p_{i} > 0$  $\forall i$. Áp dụng bất đẳng thức \textbf{AM-GM}: $a_{1}^{p_{1}}. ... .a_{n}^{p_{n}} \leq p_{1}a_{1}. ... .p_{n}a_{n}$: Đặt $a_{i} = \frac{1}{p_{i}}$ và lấy $\log$ 2 vế, ta được:
+\item Không mất tính tổng quát, giả sử $p_{i} > 0$  $\forall i$. Áp dụng bất đẳng thức \textbf{AM-GM} \eqref{amgm}: Đặt $a_{i} = \frac{1}{p_{i}}$ và lấy $\log$ 2 vế, ta được:
 \begin{equation*}
 H(X) = \displaystyle \sum_{i=1}^{n}p_{i}\log_{2}\frac{1}{p_{i}} \leq \log_{2}\Big(\displaystyle \sum_{i=1}^{n}p_{i}\frac{1}{p_{i}}\Big) = \log_{2}n.
 \end{equation*}
@@ -277,10 +407,10 @@ H(X,Y) - (H(X) + H(Y))
 \end{array}
 \end{equation*}
 Dâu "$=$" xảy ra khi và chỉ khi $X$,$Y$ độc lập với nhau.
-\item Theo $(B)$ và $(C)$:
-\begin{equation*}
-	H(Y|X) - H(X) = H(X,Y) - H(Y) - H(X) \leq 0,
-\end{equation*}
+%\item Theo $(B)$ và $(C)$:
+%\begin{equation*}
+%	H(Y|X) - H(X) = H(X,Y) - H(Y) - H(X) \leq 0,
+%\end{equation*}
 Dấu "$=$" xảy ra  khi và chỉ khi $X$,$Y$ độc lập với nhau.
 
 \item Ta có $supp\textrm{ }(Y|a) = \{b: Pr(Y=b|X=a) > 0 \}$ .Vì $Pr(Y=b|X=a)$ là 1 biến ngẫu nhiên trên tập $supp$ $(Y|a)$ (Do $\displaystyle \sum_{i=1}^{m}Pr(Y=b_{i}|a) =1$) Tiến hành chia tập $supp$ $X$ thành các tập con $E_{j}$ theo giả thuyết và sử dụng kết quả từ \textbf{(A)}, ta có:
@@ -296,21 +426,25 @@ H(X,Y)
 \end{array}
 \end{equation*}
 \end{enumerate}
-
+\end{proof}
 
 
 
 \chapter{Entropy và bài toán Vĩnh thức}
-
-
+Nội dung chính của chương này dựa theo chương 37 của cuốn sách ‘‘Proofs from THE BOOK’’, Martin Aigner, Günter M. Ziegler, , $6^{th}$ Edition.\\
+Trước khi đi vào nội dung chương này, em xin nhắc lại một số định nghĩa cơ bản và thuật ngữ về đồ thị. Một đồ thị $G = (V,E)$ là một cấu trúc bao gồm tập hữu hạn các \textit{đỉnh} $V$ (hay được gọi là các \textit{nút}) và tập hợp hữu hạn các \textit{cạnh} $E$ sao cho mỗi \textit{cạnh} $e$ được liên kết với một cặp \textit{đỉnh} $v$ và $w$. Khi hai đỉnh là điểm cuối của một cạnh thì ta nói chúng \textit{kề nhau}. \textit{Lân cận} của một đỉnh là tập các đỉnh kề với đỉnh đó.
 \section{Đồ thị hai phía}
 \subsection{Khái niệm}
 Một đồ thị đơn vô hướng $G: = (V,E)$ được gọi là đồ thị hai phía nếu tồn tại một phân hoạch của tập đỉnh $V=V_1 \cup V_2$ sao cho $V_{1}$ và $V_{2}$ là các tập độc lập và thoả mãn: bất kỳ cạnh nào thuộc tập cạnh $E$ của đồ thị cũng nối một đỉnh $\in V_1$ với một đỉnh $\in V_2$.  Ta thường viết $G: = (V_{1} \cup V_{2},E)$ để ký hiệu một đồ thị hai phía với các phân hoạch $V_1$ và $V_2$. Nếu |$ V_{1} | = | V_{2} |$ thì G được gọi là đồ thị hai phía cân bằng. \\
 Ví dụ về đồ thị hai phía: 
+\begin{figure}
 \begin{center}
-	\includegraphics[width=8cm]{ex1}\\
+	\includegraphics[width=7cm]{ex1}\\
+ 	\caption{Ví dụ về đồ thị hai phía}
+	\label{fig:t}
 \end{center}
-Đồ thị trên là một đồ thị hai phía vì:
+\end{figure}
+Đồ thị (\ref{fig:t}) là một đồ thị hai phía vì:
 \begin{itemize}
 	\item Các đỉnh của đồ thị có thể phân tách thành hai tập $V_1=\{A,C\}$ và $V_2=\{B,D\}$ 
 	\item Các đỉnh của tập $V_1$ chỉ nối với các đỉnh của tập $V_2$ và ngược lại
@@ -343,7 +477,7 @@ Ngược lại, mọi đồ thị hai phía G với $n+n$ nút cho ta một ma t
 \begin{equation*}
 	per M = \displaystyle \sum_{\sigma \in S_{n}}m_{1\sigma(1)}m_{2\sigma(2)}...m_{n\sigma(n)}
 \end{equation*}
-Khi đó, mỗi thành phần $m_{1\sigma(1)}m_{2\sigma(2)}...m_{n\sigma(n)}$ nhận giá trị $0$ hoặc $1$; bằng 1 khi và chỉ khi tập các cạnh $\{u_{1}v_{\sigma(1)},...,u_{n}v_{\sigma(n)}\}$ là một \textit{ghép cặp hoàn hảo (perfect matching)} của $G_M$ và ngược lại. Do đó số lượng \textit{ghép cặp hoàn hảo} $m(G_M)$ chính là giá trị của vĩnh thức, hay $per M = m(G_M)$
+Khi đó, mỗi thành phần $m_{1\sigma(1)}m_{2\sigma(2)}...m_{n\sigma(n)}$ nhận giá trị $0$ hoặc $1$; bằng 1 khi và chỉ khi tập các cạnh $\{u_{1}v_{\sigma(1)},...,u_{n}v_{\sigma(n)}\}$ là một \textit{ghép cặp hoàn hảo (perfect matching)} của $G_M$ và ngược lại. Do đó số lượng \textit{ghép cặp hoàn hảo} $m(G_M)$ chính là giá trị của vĩnh thức, hay $per M = m(G_M)$.
 Mối liên hệ giữa $G \leftrightarrow M_G$ đã minh hoạ cho một nghiên cứu về vĩnh thức. Một trong những vẫn đề khó khăn đầu tiên là một phỏng được đưa ra bởi Henryk Minc vào năm 1967: Giả sử ma trận $M$$-\{0/1\}$ có tổng theo hàng $d_1,...,d_n$ (tương đương với các đỉnh $u_1,..u_n$ có bậc $d_1,..d_n$), khi đó:
 \begin{equation*}
     per M \leq \prod_{i=1}^{n}(d_{i}!)^{1/d_{i}}.
@@ -423,7 +557,7 @@ Phỏng đoán trên của Minc được Lev M. Brégman chứng minh vào năm 
 \end{equation*}
 
 \begin{proof}
- Xét $G=(U \cup V,E)$ là đồ thị hai phía tương ứng với ma trận $M$, trong đó $d_{i}$ là bậc tương ứng của các đỉnh $u_{i}$, và kí hiệu $\mathfrak{S}$ là tập các \textit{perfect matching} của G. Vì $per M=m(G) = |\mathfrak{S}|$ nên thay vì tìm cận trên cho $per M$ như định lý 1, ta sẽ tìm cận trên cho $|\mathfrak{S}|$. Giả sử $|\mathfrak{S}| \neq 0$ và mỗi $\sigma \in \mathfrak{S}$ là một hoán vị tương ứng $\sigma (1) \sigma (2) ....  \sigma (n)$ của các chỉ số. Vì vậy, tương ứng với mỗi giá trị $u_{i} \in U$ là một giá trị $v_{\sigma(i)} \in U$ theo phép song ánh $\sigma$. Ý tưởng ban đầu là chọn $\sigma$ một cách ngẫu nhiên và xét biến ngẫu nhiên $X=(X_{1},X_{2},..,X_{n}) = (\sigma(1),\sigma(2),...,\sigma(n)).$
+ Xét $G=(U \cup V,E)$ là đồ thị hai phía tương ứng với ma trận $M$, trong đó $d_{i}$ là bậc tương ứng của các đỉnh $u_{i}$, và kí hiệu $\mathfrak{S}$ là tập các \textit{perfect matching} của G. Vì $per M=m(G) = |\mathfrak{S}|$ nên thay vì tìm cận trên cho $per M$ như định lý 1, ta sẽ tìm cận trên cho $|\mathfrak{S}|$. Giả sử $|\mathfrak{S}| \neq 0$ và mỗi $\sigma \in \mathfrak{S}$ là một hoán vị tương ứng $\sigma (1) \sigma (2) ....  \sigma (n)$ của các chỉ số. Vì vậy, tương ứng với mỗi giá trị $u_{i} \in U$ là một giá trị $v_{\sigma(i)} \in V$ theo phép song ánh $\sigma$. Ý tưởng ban đầu là chọn $\sigma$ một cách ngẫu nhiên và xét biến ngẫu nhiên $X=(X_{1},X_{2},..,X_{n}) = (\sigma(1),\sigma(2),...,\sigma(n)).$
 \\
 Theo mệnh đề \textbf{(A)},
 \begin{equation*}
@@ -450,18 +584,18 @@ Lấy ví dụ, xét đồ thị hai phía (Hình \ref{fig:image1}), có $|\math
 \end{center}
 \end{figure}
 %$\sigma (\tau (1)), \sigma (\tau (2)), .... , \sigma (\tau (n))$
-Ý tưởng của Radhakrishnan là xét các đỉnh  $u_{1}, u_{2}, ....  , u_{n}$ theo một \textit{thứ tự ngẫu nhiên $\tau \in S_{n}$} , với xác suất là như nhau và bằng $\frac{1}{n!}$, và lấy giá trị kì vọng của các entropy. Nói cách khác, ta xét các cặp \textit{matching} theo thứ tự $\tau_{1},\tau_{2},..,\tau_{n}$ . Xét $\tau$ cố định, khi đó $k_{i} = \tau ^{-1}_{i}$ được hiểu là vị trí của $u_{i}$ theo thứ tự ngẫu nhiên $\tau$ là $k_{i}$. Khi đó, biểu thức \eqref{eqEntropy2} trở thành:
+Ý tưởng của Radhakrishnan là xét các đỉnh  $u_{1}, u_{2}, ....  , u_{n}$ theo một \textit{thứ tự ngẫu nhiên $\tau \in S_{n}$}, trong đó mọi $\tau$ có xác suất như nhau và bằng $\frac{1}{n!}$, sau đó lấy giá trị trung bình của các entropy. Nói cách khác, ta xét các cặp ghép (\textit{matching}) theo thứ tự $\tau_{1},\tau_{2},..,\tau_{n}$ . Xét $\tau$ cố định, khi đó $k_{i} = \tau ^{-1}_{i}$ được hiểu là vị trí của $u_{i}$ theo thứ tự ngẫu nhiên $\tau$ là $k_{i}$. Khi đó, biểu thức \eqref{eqEntropy2} trở thành:
 \begin{equation*}
 	H(\sigma(1),...,\sigma(n)) = \displaystyle \sum_{i=1}^{n}H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big)
 \end{equation*}
 %H(\sigma(1),...,\sigma(n)) = \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1)))	
-Khi đó
+đúng với mọi $\tau$, lấy giá trị trung bình ta được: 
 %\begin{equation*}
 %	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{\tau}\Bigg(\displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (\tau(1)),...,\sigma (\tau(k_{i}-1))) \Bigg)
 %\end{equation*}
-\begin{equation*}
-	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{i=1}^{n}H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big)
-\end{equation*}
+\begin{equation}
+	H(\sigma(1),...,\sigma(n)) = \frac{1}{n!}\displaystyle \sum_{\tau}\Big(\displaystyle \sum_{i=1}^{n}H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big) \Big) \label{Hentropy}
+\end{equation}
 
 Xét biểu thức 
 %\begin{equation}
@@ -471,11 +605,11 @@ Xét biểu thức
 H\Big(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})\Big) \label{eqEntropy}
 \end{equation}
 
-Để tìm cận trên cho \eqref{eqEntropy}, ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big( \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1}) \Big)$ và $Y=\sigma(i)$. Với $\tau$ cố định $\in S_{n}$ và $\sigma \in \mathfrak{S}$ đặt $N_{i}(\sigma,\tau)$ là số các giá trị $k \in [n]$ sao cho $u_{i}v_{k} \in E(G)$ và k $\notin {\Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big)}$ (nói cách khác, $N_{i}(\sigma,\tau)$ là số khả năng còn lại cho $\sigma(i)$ khi đã biết ($\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1})$). Vì $deg(u_{i}) = d_{i}$  đồng thời $u_{i}$ phải được ghép cặp trong $\sigma$ nên $1 \leq N_{i}(\sigma,\tau) \leq d_{i} $ với mọi $\sigma \in \mathfrak{S}$. Tiến hành chia tập $supp X$ thành các tập con $E_{i,j}^{(\tau)}$ sao cho : 
+Để tìm cận trên cho \eqref{eqEntropy}, ta sẽ sử dụng mệnh đề \textbf{(C)}, áp dụng với biến ngẫu nhiên $X=\Big( \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1}) \Big)$ và $Y=\sigma(i)$. Với $\tau$ cố định $\in S_{n}$ và $\sigma \in \mathfrak{S}$, đặt $N_{i}(\sigma,\tau)$ là số các giá trị $k \in [n]$ sao cho $u_{i}v_{k} \in E(G)$ và k $\notin {\Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big)}$ (nói cách khác, $N_{i}(\sigma,\tau)$ là số khả năng còn lại cho $\sigma(i)$ khi đã biết ($\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1})$). Vì $deg(u_{i}) = d_{i}$  đồng thời $u_{i}$ phải được ghép cặp trong $\sigma$ nên $1 \leq N_{i}(\sigma,\tau) \leq d_{i} $ với mọi $\sigma \in \mathfrak{S}$. Tiến hành chia tập $supp X$ thành các tập con $E_{i,j}^{(\tau)}$ sao cho : 
 \begin{equation*}
 \Big(\sigma(\tau_{1}),...,\sigma(\tau_{k_{i}-1}) \Big) \in E_{i,j}^{(\tau)} <=> N_{i}(\sigma,\tau) = j, \textrm{ với } 1 \leq j \leq d_{i}
 \end{equation*}
-Coi $N_{i}(\sigma,\tau)$ là một biến ngẫu nhiên trên $\mathfrak{S}$, ta có:
+Coi $|N_{i}(\sigma,\tau)|$ là một biến ngẫu nhiên trên $\mathfrak{S}$, ta có:
 \begin{equation*}
 Pr(X \in  E_{i,j}^{(\tau)} ) = Pr( N_{i}(\sigma,\tau) = j)
 \end{equation*}
@@ -483,13 +617,13 @@ Từ mệnh đề \textbf{(C)}, với $\tau$ cố định:
 \begin{equation*}
 \begin{array}{l@{}l}
 H(\sigma (i)| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})) 
-    &{} \leq \displaystyle \sum_{j=1}^{d_{i}}Pr(|N_{i}(\sigma,\tau)|=j)\log_{2}j \\
+    &{} \leq \displaystyle \sum_{j=1}^{d_{i}}Pr(N_{i}(\sigma,\tau)=j)\log_{2}j \\
     &{} = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j\displaystyle \sum_{\sigma \in \mathfrak{S}}P(\sigma).P(N_{i}(\sigma,\tau)=j | \sigma)  \textrm{ (Do } {\sigma \in \mathfrak{S}}  \textrm{ là 1 nhóm đầy đủ)}\\
     &{} = \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j\displaystyle \sum_{\sigma \in \mathfrak{S}}\frac{P(N_{i}(\sigma,\tau)=j | \sigma)}{|\mathfrak{S}|}
 \end{array}
 \end{equation*}
 
-Kết hợp với ... 
+Kết hợp với \eqref{Hentropy}
 \begin{equation}
     H(\sigma (1),...,\sigma (n)) \leq \displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg( \frac{1}{n!|\mathfrak{S}|} \displaystyle \sum_{\sigma \in \mathfrak{S}}\displaystyle \sum_{\tau \in S_{n}}P(N_{i}(\sigma,\tau)=j | \sigma) \Bigg)
 \end{equation}
@@ -505,13 +639,13 @@ Và biểu thức \eqref{eqEntropy2} trở thành:
 \begin{array}{l@{}l}
 H(\sigma (1), \sigma (2), ....  ,\sigma (n)) 
 &{}= \displaystyle \sum_{i=1}^{n}H(\sigma (i)| \sigma (1), \sigma (2), ....  ,\sigma (i-1)) \\
-&{} =  \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\mathfrak{S}|}\displaystyle \sum_{\sigma \in \mathfrak{S}}\frac{n!}{d_{i}} \Bigg) \\
+&{} \leq  \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\mathfrak{S}|}\displaystyle \sum_{\sigma \in \mathfrak{S}}\frac{n!}{d_{i}} \Bigg) \\
  &{}= \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j \Bigg(\frac{1}{n!|\mathfrak{S}|}.|\mathfrak{S}|.\frac{n!}{d_{i}} \Bigg) \\
- &{}= \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j.\frac{1}{d_{i}} =\displaystyle \sum_{i=1}^{n} \frac{\log_{2}d_{i}!}{d_{i}}.  				\qedhere
+ &{}= \displaystyle \sum_{i=1}^{n}\displaystyle \sum_{j=1}^{d_{i}}\log_{2}j.\frac{1}{d_{i}} =\displaystyle \sum_{i=1}^{n}\frac{1}{d_{i}}\log_{2}(d_{i}!). 				\qedhere
 \end{array}
 \end{equation*}
 \end{proof}
-
+%$\sum_{i=1}^{n}\frac{1}{d_{i}}\log_{2}(d_{i}!).$
 \chapter{Hình vuông Latin}
 \section{Khái niệm}
 Hình vuông latin là một trong số những hình tổ hợp lâu đời nhất, có những nghiên cứu rõ ràng từ thời cổ đại. Để có được hình vuông Latin, ta phải điền vào $n^{2}$ ô của một mảng các ô vuông kích thước $n \times n$ các số $1,2,..,n$ sao cho mỗi số điền vào chỉ xuất hiện đúng một lần ở mỗi hàng và mỗi cột chứa số đó. Nói cách khác, mỗi hàng và mỗi cột này là một hoán vị của tập $\{1,2,...,n\}$. Khi đó ta nói đó là hình vuông Latin bậc $n$.
@@ -566,7 +700,7 @@ L(1) = 1, L(2) = 2, L(3) = 12, L(4) = 576, L(5) = 161280
 \end{equation*}
 Ta thấy khi n lớn, thì số lượng hình vuông Latin bậc n tăng rất nhanh. Liệu ta có thể tìm được một chặn trên cho giá trị này ? Kết quả của định lý Brégman sẽ giải quyết được vấn đề này.
 \section{Mô hình bài toán}
-Xét một hình vuông $n \times n$ và điền vào đó các số $1,2,..,n$ sao cho đó là một hình vuông Latin. Có $n!$ cách điền vào hàng đầu tiên (hoán vị của $n$ phần tử). Giả sử $n-k$ hàng đầu tiên đã được điền và cho ta một hình chữ nhật Latin $(n-k) \times n$ R. Vậy có bao nhiêu cách để điền vào hàng tiếp theo? Xét một đồ thị hai phía $G_k = (U \cup V,E)$, trong đó $U$ là tập các phần tử $\{1,2,..,n\}$ và $V$ là tập các vị trí của cột, sao cho:
+Xét một hình vuông $n \times n$ và điền vào đó các số $1,2,..,n$ sao cho đó là một hình vuông Latin. Có $n!$ cách điền vào hàng đầu tiên (hoán vị của $n$ phần tử). Giả sử $n-k$ hàng đầu tiên đã được điền và cho ta một hình chữ nhật Latin R kích thước $(n-k) \times n$. Vậy có bao nhiêu cách để điền vào hàng tiếp theo? Xét một đồ thị hai phía $G_k = (U \cup V,E)$, trong đó $U$ là tập các phần tử $\{1,2,..,n\}$ và $V$ là tập các vị trí của cột, sao cho:
 \begin{equation*}
 ij \in E :\Leftrightarrow i \textrm{ không xuất hiện trong cột thứ } j \textrm{ của } R.
 \end{equation*}
@@ -589,7 +723,7 @@ Mọi hàng và cột trong $M_k$ có tổng bằng $k$; ta kí hiệu tập cá
 Sử dụng định lý Brégman với $d_1=d_2=...=d_n=k$ ta có ngay
 \begin{equation*}
 	\textrm{per } M \leq k!^{\frac{n}{k}}		 \textrm{								với mọi      }M \in \mathcal{M}(n,k)
-\end{equation*}
+\end{equation*} 
 Bây giờ là giá trị cho cận dưới: Giả sử $k<n$ và đặt $L$ là hình chữ nhật Latin $k \times n$ ($k$ hàng trên đã được điền) trên $\{1,2,...,n\}$. Để tính số cách điền các số vào các hàng tiếp theo ($k+1$) để tạo thành hình chữ nhật Latin $(k+1) \times n$, đặt $M=(m_{ij})$ là một ma trận sao cho $m_{ij} = 1$ nếu $i$ không xuất hiện ở cột thứ $j$ và bằng $0$ nếu ngược lại. Khi đó giá trị $\textrm{per }(M)$ sẽ đếm số cách có thể điền vào hàng thứ $k+1$. Tổng theo hàng và cột của ma trận $M = n-k$ nên $\frac{1}{n-k}B$ là ma trận \textit{ngẫu nhiên kép}. Theo định lý \eqref{eqPer} về vĩnh thức: $\textit{per }(M) \geq (n-k)^n\frac{n!}{n^n}$ nên ta có:
 \begin{equation*}
 	L(n) \geq n! \displaystyle\prod_{k=1}^{n-1}\{ (n-k)^{n}\frac{n!}{n^n} \} = \frac{(n!)^{2n}}{n^{n^2}} .
@@ -600,7 +734,7 @@ Bây giờ là giá trị cho cận dưới: Giả sử $k<n$ và đặt $L$ là
 %\end{equation*}
 Tổng quát, ta đã chứng minh được kết quả đáng chủ ý sau:
 \begin{theorem}
-	Giới hạn về số hình vuông Latin bậc n L(n) là
+	Số hình vuông Latin bậc n (kí hiệu: L(n)) thoả mãn
 	\begin{equation*}
 		\frac{n!^{2n}}{n^{n^2}} \leq L(n) \leq \displaystyle \prod_{k=1}^{n} k!^{\frac{n}{k}}.
 	\end{equation*}
@@ -610,10 +744,10 @@ Sử dụng tính xấp xỉ của $n!$:
 \begin{equation}
 	\Big( \frac{n}{e} \Big)^n < n! < en\Big(\frac{n}{e} \Big)^n, \label{n!}
 \end{equation}
-Ta có thể rút ra công thức về tiệm cận sau đây.
+Ta có thể rút ra công thức về giới hạn sau đây.
 
 \begin{corollary}
-	Theo giới hạn, số hình vuông Latin bậc $n$ $L(n)$ thoả mãn
+	Theo giới hạn, số hình vuông Latin bậc $n$, kí hiệu bởi $L(n)$ thoả mãn
 	\begin{equation*}
 		\lim_{n \to \infty} \frac{L(n)^{\frac{1}{n^2}}}{n} = \frac{1}{e^2}
 	\end{equation*}
@@ -644,13 +778,13 @@ Ta có thể rút ra công thức về tiệm cận sau đây.
 		\begin{equation}
 			\displaystyle \sum_{k=1}^{n} \log k < \log\Big( en\Big(\frac{n}{e}\Big)^{n}\Big) = 1+ (n+1)\log n -n \leq (n+2 )\log n - n \label{eq}
 		\end{equation}
-		Đối với tổng thứ hai, vì $\frac{\log x}{x}$ luôn dương với mọi $x>1$ và làm hàm đơn điệu giảm với $x >e$, ta có:
+		Đối với tổng thứ hai, vì $\frac{\log x}{x}$ luôn dương với mọi $x>1$ và là hàm đơn điệu giảm với $x >e$, ta có:
 		\begin{equation*}
 			\int_{1}^{n}\frac{\log x}{x} \geq \displaystyle \sum_{k=4}^{n}\int_{k-1}^{k}\frac{\log x}{x}dx \geq \displaystyle \sum_{k=4}^{n}\int_{k-1}^{k}\frac{\log k}{k}dx = \displaystyle \sum_{k=4}^{n}\frac{\log k}{k},
 		\end{equation*}
 		nên 
 		\begin{equation}
-			 \displaystyle \sum_{k=1}^{n}\frac{\log k}{k} \leq 2 + \Big[\frac{1}{2}(\log x)^2\Big]\mid_{1}{n} = 2+ \frac{1}{2}(\log n)^2. \label{eq1}
+			 \displaystyle \sum_{k=1}^{n}\frac{\log k}{k} \leq 2 + \Big[\frac{1}{2}(\log x)^2\Big] \Big|_1^n  = 2+ \frac{1}{2}(\log n)^2. \label{eq1}
 		\end{equation}
 Từ \eqref{eq} và \eqref{eq1} ta có: 
 \begin{equation*}
@@ -664,9 +798,14 @@ nên $L(n)^\frac{1}{n^2} \leq \frac{n}{e^2}e^{\delta}$ khi $n$ đủ lớn. Ta c
 \end{proof}
 
 
+\chapter*{TỔNG KẾT}
+\addcontentsline{toc}{chapter}{Tổng kết} 
+\mdseries
 
+	Qua bài báo cáo này, em đã tìm hiểu được một trong những đặc trưng của ma trận là vĩnh thức,  cùng với chứng minh các bất đẳng thức liên quan đến giá trị này thông qua các phép biến đổi đại số và kiến thức về entropy từ lý thuyết thông tin, qua đó ứng dụng chúng để giải quyết bài toán đếm tổ hợp xác định số hình vuông Latin bậc $n$.
 
-
+%	Một lần nữa khằng định, phương pháp phân tích thành phần chính là phương pháp giảm chiều dữ liệu hiệu quả nhất. PCA thực chất là đi tìm một phép xoay tương ứng với một ma trận trực giao sao cho trong hệ toạ độ mới, tồn tại các chiều có phương sai nhỏ mà ta có thể bỏ qua; ta chỉ cần giữ lại các chiều/thành phần khác quan trọng hơn. Như đã chứng minh ở trên, tổng phương sai theo mọi chiều trong hệ cơ sở nào cũng là như nhau và bằng tổng các trị riêng của ma trận hiệp phương sai. Vì vậy, PCA còn được coi là phương pháp giảm số chiều dữ liệu mà giữ được tổng phương sai còn lại là lớn nhất.
+	
 
 
 
@@ -679,4 +818,13 @@ nên $L(n)^\frac{1}{n^2} \leq \frac{n}{e^2}e^{\delta}$ khi $n$ đủ lớn. Ta c
 %$H(\sigma (\tau_{1}),..,\sigma (\tau_{n})) = \frac{1}{n!}\displaystyle \sum _{\tau}\left ( \displaystyle \sum_{i=1}^{n}H(\sigma (\tau_{i})| \sigma (\tau_{1}),...,\sigma (\tau_{k_{i}-1})) \right )$
 %
 %$\Theta(n^{\log_2 2} )$
+\chapter*{Tài liệu tham khảo}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+\mdseries
+\begin{itemize}
+\item[1.]
+	Martin Aigner, Günter M. Ziegler, ‘‘Proofs from THE BOOK’’, $6^{th}$ Edition.
+\item[2.]
+	Valle Martinez, Vicente, "Notes on the proof of the van der Waerden permanent conjecture" (2018).
+\end{itemize}
 \end{document}
